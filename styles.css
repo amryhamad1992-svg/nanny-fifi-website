@@ -1152,6 +1152,10 @@ p {
     margin-bottom: var(--spacing-md);
 }
 
+.footer-links .footer-column:last-child {
+    margin-top: var(--spacing-lg);
+}
+
 .footer-column ul {
     display: flex;
     flex-direction: column;
