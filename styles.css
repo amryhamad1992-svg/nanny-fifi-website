@@ -835,6 +835,27 @@ p {
     content: '💰';
 }
 
+/* 4-Column Pricing Grid */
+.pricing-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pricing-grid-4 .pricing-card.featured {
+    transform: none;
+}
+
+@media (max-width: 1200px) {
+    .pricing-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Currency Toggle */
 .currency-toggle {
     display: flex;

@@ -66,6 +66,14 @@ const priceAmounts = document.querySelectorAll('.price-amount[data-gbp]');
 const priceCurrencies = document.querySelectorAll('.price-currency');
 const savingsSpans = document.querySelectorAll('.highlight-save span[data-gbp]');
 
+// Currency symbol mapping (for SEK which uses suffix)
+const currencySymbols = {
+    gbp: { symbol: '£', position: 'prefix' },
+    usd: { symbol: '$', position: 'prefix' },
+    eur: { symbol: '€', position: 'prefix' },
+    sek: { symbol: 'kr', position: 'prefix' }
+};
+
 function updatePrices(currency) {
     // Update price amounts
     priceAmounts.forEach(el => {
