@@ -30,17 +30,12 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#about" data-translate="nav_about">About</a></li>
-                <li><a href="#services" data-translate="nav_services">Services</a></li>
-                <li><a href="#how-it-works" data-translate="nav_how_it_works">How It Works</a></li>
-                <li><a href="#testimonials" data-translate="nav_testimonials">Testimonials</a></li>
-                <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
-                <li><a href="#book" class="btn btn-primary nav-cta" data-translate="nav_book">Book a Call</a></li>
-                <li class="lang-selector">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="sv">SV</button>
-                    <button class="lang-btn" data-lang="el">EL</button>
-                </li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#book" class="btn btn-primary nav-cta">Book a Call</a></li>
             </ul>
         </div>
     </nav>
@@ -50,29 +45,29 @@
         <div class="hero-bg"></div>
         <div class="container hero-content">
             <div class="hero-text">
-                <p class="hero-tagline" data-translate="hero_tagline">Parent Coaching</p>
-                <h1><span data-translate="hero_title">Navigate Parenthood with</span> <span class="highlight" data-translate="hero_title_highlight">Confidence</span></h1>
-                <p class="hero-description" data-translate="hero_description">
+                <p class="hero-tagline">Parent Coaching</p>
+                <h1>Navigate Parenthood with <span class="highlight">Confidence</span></h1>
+                <p class="hero-description">
                     Struggling with toddler tantrums, sleep challenges, or daily routines?
                     Get personalised, expert guidance to transform chaos into calm
                     and enjoy the journey of raising your little ones.
                 </p>
                 <div class="hero-cta">
-                    <a href="#book" class="btn btn-primary btn-large" data-translate="hero_cta_primary">Book Your Free Discovery Call</a>
-                    <a href="#services" class="btn btn-secondary btn-large" data-translate="hero_cta_secondary">Learn More</a>
+                    <a href="#book" class="btn btn-primary btn-large">Book Your Free Discovery Call</a>
+                    <a href="#services" class="btn btn-secondary btn-large">Learn More</a>
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item">
                         <span class="trust-icon">✓</span>
-                        <span data-translate="hero_trust_1">100% Online Sessions</span>
+                        <span>100% Online Sessions</span>
                     </div>
                     <div class="trust-item">
                         <span class="trust-icon">✓</span>
-                        <span data-translate="hero_trust_2">Free 30-Min Discovery Call</span>
+                        <span>Free 30-Min Discovery Call</span>
                     </div>
                     <div class="trust-item">
                         <span class="trust-icon">✓</span>
-                        <span data-translate="hero_trust_3">15 Years Experience</span>
+                        <span>15 Years Experience</span>
                     </div>
                 </div>
             </div>
@@ -661,15 +656,6 @@
         </div>
     </footer>
 
-    <script src="translations.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Language selector click handlers
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                translatePage(btn.getAttribute('data-lang'));
-            });
-        });
-    </script>
 </body>
 </html>
