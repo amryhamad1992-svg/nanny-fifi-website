@@ -838,19 +838,28 @@ p {
 /* 4-Column Pricing Grid */
 .pricing-grid-4 {
     grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.pricing-grid-4 .pricing-card {
+    padding: var(--spacing-md);
 }
 
 .pricing-grid-4 .pricing-card.featured {
     transform: none;
 }
 
-@media (max-width: 1200px) {
+.pricing-grid-4 .price-amount {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 1100px) {
     .pricing-grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .pricing-grid-4 {
         grid-template-columns: 1fr;
     }
