@@ -839,14 +839,23 @@ p {
 .pricing-grid-4 {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-md);
+    align-items: stretch;
 }
 
 .pricing-grid-4 .pricing-card {
     padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing-grid-4 .pricing-card .pricing-features {
+    flex-grow: 1;
 }
 
 .pricing-grid-4 .pricing-card.featured {
     transform: none;
+    box-shadow: var(--shadow-sm);
 }
 
 .pricing-grid-4 .price-amount {
