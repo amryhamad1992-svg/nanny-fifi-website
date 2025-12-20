@@ -608,7 +608,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xlgrbpod" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required placeholder="Jane Smith">
@@ -621,6 +621,7 @@
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" rows="4" required placeholder="Tell me about your situation..."></textarea>
                     </div>
+                    <input type="hidden" name="_subject" value="New enquiry from Nanny Fifi website">
                     <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>

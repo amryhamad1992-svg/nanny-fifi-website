@@ -125,28 +125,7 @@ if (savedCurrency) {
 }
 
 // ===== Contact Form Handling =====
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    // Create mailto link (simple solution for static site)
-    const subject = encodeURIComponent(`Website Enquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    const mailtoLink = `mailto:contact.nannyfifi@gmail.com?subject=${subject}&body=${body}`;
-
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Show success message
-    alert('Thank you for your message! Your email client should open shortly.');
-    contactForm.reset();
-});
+// Form now submits directly to Formspree - no JavaScript handling needed
 
 // ===== Intersection Observer for Animations =====
 const observerOptions = {
