@@ -358,10 +358,7 @@ p {
 
 .hero-photo {
     width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: center top;
+    max-width: 350px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
