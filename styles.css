@@ -356,26 +356,23 @@ p {
     opacity: 0.5;
 }
 
-.hero-placeholder, .about-placeholder {
-    aspect-ratio: 4/5;
-    background: var(--color-white);
+.hero-photo {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center top;
     border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
     box-shadow: var(--shadow-lg);
-    border: 3px dashed var(--color-primary-light);
 }
 
-.placeholder-emoji {
-    font-size: 4rem;
-}
-
-.hero-placeholder p, .about-placeholder p {
-    color: var(--color-text-lighter);
-    font-size: 0.875rem;
+.about-photo {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 
