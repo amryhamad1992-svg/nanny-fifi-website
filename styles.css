@@ -1153,7 +1153,7 @@ p {
 }
 
 .footer-links .footer-column:last-child {
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
 }
 
 .footer-column ul {
