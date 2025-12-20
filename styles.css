@@ -226,6 +226,37 @@ p {
     padding: 0.625rem 1.25rem !important;
 }
 
+/* Language Selector */
+.lang-selector {
+    display: flex;
+    gap: 0.25rem;
+    margin-left: var(--spacing-sm);
+}
+
+.lang-btn {
+    padding: 0.375rem 0.625rem;
+    background: transparent;
+    border: 1px solid var(--color-primary-light);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
+.lang-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
 /* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
