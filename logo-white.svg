@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70">
+  <defs>
+    <style>
+      .main-text { font-family: 'Playfair Display', Georgia, serif; font-size: 48px; font-weight: 400; fill: #FFFFFF; }
+      .heart { fill: #C9A088; font-size: 14px; font-family: Arial, sans-serif; }
+      .tagline { font-family: 'Montserrat', Arial, sans-serif; font-size: 10px; font-weight: 300; fill: rgba(255,255,255,0.8); letter-spacing: 3px; }
+    </style>
+  </defs>
+  <!-- Main title -->
+  <text class="main-text" x="10" y="40">Nanny F</text>
+  <text class="heart" x="150" y="18">♥</text>
+  <text class="main-text" x="146" y="40">ı</text>
+  <text class="main-text" x="158" y="40">f</text>
+  <text class="heart" x="178" y="18">♥</text>
+  <text class="main-text" x="174" y="40">ı</text>
+  <!-- Tagline -->
+  <text class="tagline" x="10" y="60">PARENT COACHING &amp; FAMILY CONSULTANCY</text>
+</svg>
