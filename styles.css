@@ -206,6 +206,12 @@ p {
     color: var(--color-text);
 }
 
+.logo-img {
+    height: 50px;
+    width: auto;
+    border-radius: var(--radius-sm);
+}
+
 .nav-links {
     display: flex;
     align-items: center;
