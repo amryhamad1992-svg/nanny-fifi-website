@@ -203,7 +203,7 @@ p {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--color-text);
+    color: var(--color-text-light);
 }
 
 .logo-img {
