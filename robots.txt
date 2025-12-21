@@ -1,0 +1,9 @@
+# Robots.txt for nannyfifi.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nannyfifi.com/sitemap.xml
+
+# Disallow admin/private pages (none currently)
+# Disallow: /admin/
