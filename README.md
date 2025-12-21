@@ -1,175 +1,145 @@
-# Nanny Fifi - Parent Coaching Website
+# Nanny Fifi Website
 
-## Project Overview
+Parent coaching website for Sofia Kavouri (Nanny Fifi).
 
-**Website for:** Sofia Kavouri (Nanny Fifi)
-**Domain:** nannyfifi.com
-**Business:** Online parent coaching for parents of toddlers and young children
-**Location:** London, UK (services available worldwide online)
+**Live Site:** https://nannyfifi.com
 
 ---
 
-## About Sofia (Nanny Fifi)
+## Quick Overview
 
-- **Experience:** 15+ years in childcare
-- **Education:** BA (Honours) Early Childhood from The Open University
-- **Languages:** Bilingual (English & Greek), basic Swedish
-- **Certifications:** Paediatric First Aid, Speech & Language Development, SEND, Neurodiversity, Phonics Teaching, Enhanced DBS
-- **Instagram:** [@nanny_fifi](https://instagram.com/nanny_fifi)
-- **Email:** sophia.kavouri@gmail.com
-- **Calendly:** https://calendly.com/sophia-kavouri/30min
-
----
-
-## Services Offered
-
-1. **Sleep Coaching** - Bedtime routines, night waking, nap transitions
-2. **Behaviour & Boundaries** - Tantrum management, positive discipline
-3. **Mealtime Success** - Fussy eating, weaning guidance
-4. **Potty Training** - Readiness assessment, step-by-step guidance
-5. **Speech & Language** - Language milestones, bilingual support
-6. **New Baby Prep** - Nursery setup, first weeks planning
-
----
-
-## Pricing (Competitive UK Rates)
-
-| Package | GBP | USD | EUR |
-|---------|-----|-----|-----|
-| Discovery Call (30 min) | Free | Free | Free |
-| Single Session (60 min) | £65 | $82 | €77 |
-| 3-Session Package | £175 | $220 | €208 |
-
-*Pricing based on UK parent coaching market research (average £50-80/session)*
+| Item | Details |
+|------|---------|
+| **Owner** | Sofia Kavouri |
+| **Email** | contact.nannyfifi@gmail.com |
+| **Hosting** | GitHub Pages |
+| **Domain** | nannyfifi.com |
+| **Repository** | github.com/amryhamad1992-svg/nanny-fifi-website |
 
 ---
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (vanilla)
-- **Fonts:** Playfair Display (headings), Inter (body)
-- **Booking:** Calendly embed
-- **Hosting:** GitHub Pages (planned)
-- **Domain:** nannyfifi.com
+- HTML, CSS, JavaScript (static site)
+- GitHub Pages hosting
+- Stripe (payments)
+- Calendly (booking)
+- Formspree (contact form)
+- Google Analytics (tracking)
 
 ---
 
-## File Structure
+## Pages
 
-```
-nanny-fifi-website/
-├── index.html      # Main website (all sections)
-├── styles.css      # All styling + CSS variables
-├── script.js       # Interactivity (menu, FAQ, currency toggle, animations)
-├── README.md       # This file
-└── SETUP-GUIDE.md  # Deployment instructions
-```
-
----
-
-## Current Colour Scheme (Warm & Nurturing)
-
-```css
---color-primary: #E8A598;        /* Soft coral/peach */
---color-primary-dark: #D4887A;   /* Darker coral */
---color-primary-light: #F5D5CE;  /* Light peach */
---color-secondary: #F9E4DE;      /* Cream pink */
---color-bg: #FFFAF8;             /* Warm white */
---color-text: #4A3F3A;           /* Warm dark brown */
-```
-
-### Alternative Colour Schemes Explored
-
-1. **Charcoal & Rose Gold** - `#B76E79` primary, `#1A1717` text
-2. **Dark Mode** - `#141212` bg, `#D4A5A5` primary, `#F5F0F0` text
-3. **Navy & Gold** - Professional, trustworthy
-4. **Sage & Cream** - Calm, natural
-5. **Teal & Blush** - Modern, friendly
+| File | Description |
+|------|-------------|
+| index.html | Main landing page |
+| behaviour-emotions.html | Behaviour & Emotions service page |
+| routines-daily-life.html | Sleep, Meals & Routines service page |
+| confidence-transitions.html | Confidence & Transitions service page |
+| parental-wellbeing.html | Parental Wellbeing service page |
+| thank-you.html | Post-payment confirmation page |
 
 ---
 
-## Features
+## Pricing & Services
 
-- Responsive design (mobile, tablet, desktop)
-- Smooth scroll navigation
-- FAQ accordion
-- Currency toggle (GBP/USD/EUR) with localStorage
-- Calendly booking embed
-- Contact form (mailto)
-- Scroll animations (Intersection Observer)
-- Mobile hamburger menu
+| Service | Price (GBP) | Stripe Link |
+|---------|-------------|-------------|
+| Discovery Call | FREE | Calendly embed |
+| Single Session (60 min) | 85 GBP | https://buy.stripe.com/28EfZi3dZ9Blf3d2NCe7m00 |
+| 3-Session Package | 225 GBP | https://buy.stripe.com/eVq7sM29VbJtcV53RGe7m01 |
+| Email Coaching (6 exchanges) | 45 GBP | https://buy.stripe.com/eVq6oI8yjbJt2grfAoe7m02 |
 
 ---
 
-## Website Sections
+## Integrations
 
-1. **Hero** - Main headline, CTAs, trust badges
-2. **About** - Sofia's background, credentials, stats
-3. **Services** - 6 service cards with features
-4. **How It Works** - 4-step process with connected line
-5. **Testimonials** - 3 testimonial cards (placeholder)
-6. **Pricing** - 3 tiers with currency toggle
-7. **FAQ** - 6 questions with accordion
-8. **Booking** - Calendly embed + benefits
-9. **Contact** - Email, Instagram, contact form
-10. **Footer** - Links, social, copyright
+### Calendly
+- **Account Email:** contact.nannyfifi@gmail.com
+- **30-min Discovery Call:** https://calendly.com/contact-nannyfifi/30min
+- **60-min Coaching Session:** https://calendly.com/contact-nannyfifi/60-minute-coaching-session
 
----
+### Stripe
+- Payment links redirect to Calendly (for paid sessions) or thank-you page (for email coaching)
+- Stripe account under Sofia's email
 
-## To-Do / Future Enhancements
+### Formspree (Contact Form)
+- **Endpoint:** https://formspree.io/f/xlgrbpod
+- Submissions go to contact.nannyfifi@gmail.com
 
-- [ ] Add Sofia's actual photos (hero, about section)
-- [ ] Replace placeholder testimonials with real ones
-- [ ] Finalise colour scheme (user exploring options)
-- [ ] Deploy to GitHub Pages
-- [ ] Connect nannyfifi.com domain
-- [ ] Add Google Analytics
-- [ ] Consider adding blog section
-- [ ] Add favicon/logo
+### Google Analytics
+- **Tracking ID:** G-HJFNH2HBF2
+- Added to all pages
+
+### Google Search Console
+- Verified with google3239d655610bf37b.html
+- Sitemap submitted: sitemap.xml
 
 ---
 
-## Design Notes
+## SEO Files
 
-- User prefers sleek, professional look
-- Avoid AI-sounding text (no em dashes)
-- British English throughout (colour, personalised, behaviour, mum, whilst)
-- All text written in first person from Sofia's perspective
+| File | Purpose |
+|------|---------|
+| sitemap.xml | Lists all pages for search engines |
+| robots.txt | Crawling instructions |
+| google3239d655610bf37b.html | Google Search Console verification |
+
+---
+
+## Images
+
+Located in /images/ folder:
+- logo.jpg - Pram logo (used in navbar and footer)
+- sofia-profile.jpg - Sofia's headshot (hero section)
+- sensory-play.jpg - Sensory play photo (about section)
 
 ---
 
 ## Deployment
 
-See `SETUP-GUIDE.md` for:
-- GitHub Pages deployment steps
-- Calendly setup instructions
-- Domain connection (DNS settings)
-
----
-
-## Quick Commands
+The site auto-deploys via GitHub Pages when changes are pushed to main branch.
 
 ```bash
-# Preview locally
-cd "C:\Users\hamad\OneDrive\Desktop\nanny-fifi-website"
-python -m http.server 8080
-# Then open http://localhost:8080
-
-# Deploy to GitHub
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/USERNAME/nannyfifi.com.git
-git push -u origin main
+git add -A
+git commit -m "Your message"
+git push origin main
 ```
+
+Changes typically go live within 1-2 minutes.
 
 ---
 
-## Contact
+## Key Styles
 
-- **Owner:** Hamad (Sofia's husband)
-- **Sofia's Email:** sophia.kavouri@gmail.com
-- **Sofia's Instagram:** @nanny_fifi
+CSS variables in styles.css:
+- Primary color: #E8A598 (soft coral/peach)
+- Text color: #4A3F3A (warm dark brown)
+- Text light: #7D6E66 (lighter brown - used for nav links and logo text)
+- Background: #FFFAF8 (warm white)
+
+---
+
+## Customer Flow
+
+1. **Discovery Call (Free)**
+   - User clicks "Book Free Call" -> Calendly 30-min embed
+
+2. **Paid Session**
+   - User clicks "Book Session" -> Stripe payment -> Calendly 60-min booking
+
+3. **Email Coaching**
+   - User clicks "Book Session" -> Stripe payment -> Thank You page
+
+4. **Contact Form**
+   - User fills form -> Formspree -> Email to contact.nannyfifi@gmail.com
+
+---
+
+## Social Media
+
+- **Instagram:** https://instagram.com/nanny_fifi
 
 ---
 
