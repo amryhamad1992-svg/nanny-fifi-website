@@ -550,11 +550,11 @@
             <div class="quiz-meta">
                 <span class="quiz-meta-item">
                     <span>⏱️</span>
-                    <span>2 minutes</span>
+                    <span>3 minutes</span>
                 </span>
                 <span class="quiz-meta-item">
                     <span>📝</span>
-                    <span>15 questions</span>
+                    <span>12 questions</span>
                 </span>
                 <span class="quiz-meta-item">
                     <span>🎯</span>
@@ -721,111 +721,126 @@
     <script>
         // ===== Love Language Quiz =====
 
-        // Quiz Questions Data
+        // Quiz Questions Data - 5 options per question (one for each love language)
         const questions = [
             {
                 text: "When your child comes home from nursery or school, what do they seem to want most?",
                 options: [
                     { text: "A big hug and to sit close to you", type: "touch" },
-                    { text: "To tell you all about their day while you listen", type: "time" }
+                    { text: "To hear 'I missed you! Tell me everything!'", type: "words" },
+                    { text: "Your full, undivided attention to chat together", type: "time" },
+                    { text: "To see if you have a little surprise for them", type: "gifts" },
+                    { text: "Help with their bag, coat, and getting a snack ready", type: "service" }
                 ]
             },
             {
-                text: "How does your child typically show affection to family members or friends?",
+                text: "How does your child typically show affection to you or others?",
                 options: [
-                    { text: "Giving hugs, kisses, or physical closeness", type: "touch" },
-                    { text: "Making cards, drawings, or giving small gifts", type: "gifts" }
+                    { text: "Hugs, kisses, and wanting to be physically close", type: "touch" },
+                    { text: "Saying 'I love you' and giving compliments", type: "words" },
+                    { text: "Wanting to do activities together", type: "time" },
+                    { text: "Making cards, drawings, or giving small gifts", type: "gifts" },
+                    { text: "Trying to help with tasks or chores", type: "service" }
                 ]
             },
             {
                 text: "What makes your child's face light up the most?",
                 options: [
-                    { text: "When you say 'I'm so proud of you' or give specific praise", type: "words" },
-                    { text: "When you help them with something they're struggling with", type: "service" }
+                    { text: "A surprise hug or tickle session", type: "touch" },
+                    { text: "Hearing 'I'm so proud of you!'", type: "words" },
+                    { text: "When you put down your phone to play with them", type: "time" },
+                    { text: "Receiving a small unexpected present", type: "gifts" },
+                    { text: "When you help them with something difficult", type: "service" }
                 ]
             },
             {
-                text: "When your child is upset, what usually helps them feel better?",
+                text: "When your child is upset, what helps them feel better fastest?",
                 options: [
                     { text: "Being held, cuddled, or having their back rubbed", type: "touch" },
-                    { text: "Hearing reassuring words like 'You're going to be okay'", type: "words" }
+                    { text: "Reassuring words like 'You're going to be okay'", type: "words" },
+                    { text: "You sitting quietly with them, just being present", type: "time" },
+                    { text: "Their comfort toy or a small treat", type: "gifts" },
+                    { text: "You fixing the problem or helping make it better", type: "service" }
                 ]
             },
             {
-                text: "How does your child react when you can't spend time with them?",
+                text: "How does your child react when you've been away?",
                 options: [
-                    { text: "They ask 'Can we play together?' or seem to crave your attention", type: "time" },
-                    { text: "They ask you to do something for them or get upset when you're busy", type: "service" }
+                    { text: "Runs to hug you and won't let go", type: "touch" },
+                    { text: "Wants to tell you everything and hear you missed them", type: "words" },
+                    { text: "Immediately wants to play or do something together", type: "time" },
+                    { text: "Asks if you brought them something", type: "gifts" },
+                    { text: "Wants you to help them with something right away", type: "service" }
                 ]
             },
             {
-                text: "What does your child appreciate most about special occasions?",
+                text: "What would disappoint your child the most?",
                 options: [
-                    { text: "The gifts and surprises they receive", type: "gifts" },
-                    { text: "Spending the whole day doing fun activities together", type: "time" }
+                    { text: "If you pushed away their hug or seemed too busy for cuddles", type: "touch" },
+                    { text: "If you criticised them or spoke harshly", type: "words" },
+                    { text: "If you cancelled planned time together", type: "time" },
+                    { text: "If you forgot a promised gift or treat", type: "gifts" },
+                    { text: "If you didn't help when they really needed it", type: "service" }
                 ]
             },
             {
-                text: "How does your child respond to compliments and encouragement?",
+                text: "When your child wants to celebrate something, they:",
                 options: [
-                    { text: "They beam with pride and often repeat what you said", type: "words" },
-                    { text: "They seem happy but quickly want to move on to an activity together", type: "time" }
+                    { text: "Want lots of hugs, high-fives, and physical celebration", type: "touch" },
+                    { text: "Want to hear praise and enthusiastic words", type: "words" },
+                    { text: "Want to spend special time together celebrating", type: "time" },
+                    { text: "Hope for a reward or special treat", type: "gifts" },
+                    { text: "Want you to do something special for them", type: "service" }
                 ]
             },
             {
-                text: "What does your child do when they want to show you they love you?",
+                text: "At bedtime, your child prefers:",
                 options: [
-                    { text: "They help you with tasks or try to make things easier for you", type: "service" },
-                    { text: "They want to hold hands, cuddle, or be physically close", type: "touch" }
+                    { text: "Cuddles, back rubs, and being tucked in snugly", type: "touch" },
+                    { text: "Hearing 'I love you' and what you love about them", type: "words" },
+                    { text: "A quiet chat about the day or a story together", type: "time" },
+                    { text: "Sleeping with a special toy or keepsake", type: "gifts" },
+                    { text: "Having everything prepared - pyjamas, water, room set up perfectly", type: "service" }
                 ]
             },
             {
-                text: "When going somewhere new or scary, what does your child need most?",
+                text: "Your child feels most loved when:",
                 options: [
-                    { text: "To hold your hand or stay physically close to you", type: "touch" },
-                    { text: "To hear you explain what will happen and that they'll be fine", type: "words" }
+                    { text: "You hold their hand or they sit on your lap", type: "touch" },
+                    { text: "You notice and comment on their efforts", type: "words" },
+                    { text: "You play their favourite game together", type: "time" },
+                    { text: "You surprise them with something thoughtful", type: "gifts" },
+                    { text: "You prepare their favourite meal", type: "service" }
                 ]
             },
             {
-                text: "What would your child find most meaningful?",
+                text: "When your child is scared or nervous, they want:",
                 options: [
-                    { text: "A thoughtful small gift that shows you were thinking of them", type: "gifts" },
-                    { text: "You helping them with a project or preparing something special for them", type: "service" }
+                    { text: "To hold your hand or be carried", type: "touch" },
+                    { text: "Reassurance and explanation about what will happen", type: "words" },
+                    { text: "You to stay close by their side", type: "time" },
+                    { text: "Their comfort object or a lucky charm", type: "gifts" },
+                    { text: "You to handle the scary thing for them", type: "service" }
                 ]
             },
             {
-                text: "How does your child typically respond to negative feedback?",
+                text: "When your child has something to share (artwork, story, achievement), they want:",
                 options: [
-                    { text: "They seem deeply hurt by critical words and take them to heart", type: "words" },
-                    { text: "They recover quickly if you follow up with physical comfort", type: "touch" }
+                    { text: "A big hug and physical celebration", type: "touch" },
+                    { text: "Enthusiastic praise with specific words", type: "words" },
+                    { text: "Your complete, undivided attention", type: "time" },
+                    { text: "To display it somewhere special or add to a collection", type: "gifts" },
+                    { text: "Your help to make it even better or frame it", type: "service" }
                 ]
             },
             {
-                text: "When your child has something to share (artwork, achievement, story), they want you to:",
+                text: "Your child shows they missed you by:",
                 options: [
-                    { text: "Give them your complete, undivided attention", type: "time" },
-                    { text: "Praise them enthusiastically with specific words", type: "words" }
-                ]
-            },
-            {
-                text: "What does your child treasure most?",
-                options: [
-                    { text: "Small keepsakes, collected items, or gifts from loved ones", type: "gifts" },
-                    { text: "Memories of special times spent together", type: "time" }
-                ]
-            },
-            {
-                text: "When your child is tired at the end of the day, they prefer:",
-                options: [
-                    { text: "Cuddling on the sofa or being carried to bed", type: "touch" },
-                    { text: "Having you help them get ready and tuck them in with care", type: "service" }
-                ]
-            },
-            {
-                text: "How does your child react when they receive a surprise gift?",
-                options: [
-                    { text: "They're absolutely thrilled and treasure it for ages", type: "gifts" },
-                    { text: "They're happy but seem more excited that you thought of them", type: "words" }
+                    { text: "Clinging to you physically", type: "touch" },
+                    { text: "Telling you repeatedly that they missed you", type: "words" },
+                    { text: "Following you around everywhere", type: "time" },
+                    { text: "Showing you things they made or saved for you", type: "gifts" },
+                    { text: "Asking for help with things they saved up", type: "service" }
                 ]
             }
         ];
@@ -940,12 +955,12 @@
             questionText.textContent = question.text;
 
             // Create options
+            const letters = ['A', 'B', 'C', 'D', 'E'];
             questionOptions.innerHTML = question.options.map((option, index) => {
-                const letter = index === 0 ? 'A' : 'B';
                 const isSelected = answers[currentQuestion] === option.type;
                 return `
                     <button class="option-btn ${isSelected ? 'selected' : ''}" data-type="${option.type}">
-                        <span class="option-letter">${letter}</span>
+                        <span class="option-letter">${letters[index]}</span>
                         <span class="option-text">${option.text}</span>
                     </button>
                 `;
