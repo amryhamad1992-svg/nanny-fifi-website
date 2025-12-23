@@ -34,6 +34,7 @@ Parent coaching website for Sofia Kavouri (Nanny Fifi).
 | File | Description |
 |------|-------------|
 | index.html | Main landing page |
+| love-language-quiz.html | Interactive quiz to discover child's love language |
 | behaviour-emotions.html | Behaviour & Emotions service page |
 | routines-daily-life.html | Sleep, Meals & Routines service page |
 | confidence-transitions.html | Confidence & Transitions service page |
@@ -140,6 +141,30 @@ CSS variables in styles.css:
 ## Social Media
 
 - **Instagram:** https://instagram.com/nanny_fifi
+
+---
+
+---
+
+## Love Language Quiz
+
+Interactive quiz to help parents discover their child's love language. Based on Dr. Gary Chapman's 5 Love Languages concept.
+
+**Features:**
+- 15 paired-choice questions
+- Progress bar and navigation
+- Instant results with percentage breakdown
+- Personalised activity suggestions for each love language
+- Share buttons (copy link, WhatsApp, Facebook)
+- Google Analytics event tracking
+- Mobile-responsive design
+
+**The 5 Love Languages:**
+1. Physical Touch - hugs, cuddles, physical closeness
+2. Words of Affirmation - verbal praise and encouragement
+3. Quality Time - undivided attention and presence
+4. Receiving Gifts - thoughtful tokens and surprises
+5. Acts of Service - helping and doing things for them
 
 ---
 

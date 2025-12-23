@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJFNH2HBF2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HJFNH2HBF2');
+    </script>
+    <meta name="description" content="Discover your child's love language with our free quiz. Learn how your child feels most loved and get personalised activity ideas to strengthen your bond.">
+    <meta name="keywords" content="child love language quiz, 5 love languages children, how does my child feel loved, parent child bonding, parenting quiz">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nannyfifi.com/love-language-quiz.html">
+    <meta property="og:title" content="Discover Your Child's Love Language | Free Quiz">
+    <meta property="og:description" content="Take our free 2-minute quiz to discover how your child feels most loved. Get personalised activity ideas to strengthen your bond.">
+    <meta property="og:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
+
+    <title>Discover Your Child's Love Language | Free Quiz | Nanny Fifi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
+
+    <style>
+        /* Quiz-specific styles */
+        .quiz-hero {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
+            padding: 120px 0 var(--spacing-xl);
+            text-align: center;
+        }
+
+        .quiz-hero h1 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .quiz-hero-description {
+            font-size: 1.125rem;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .quiz-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .quiz-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--color-text-light);
+            font-size: 0.9375rem;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        /* Progress Bar */
+        .quiz-progress {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--color-primary-light);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--color-primary);
+            border-radius: var(--radius-full);
+            transition: width 0.3s ease;
+        }
+
+        /* Question Card */
+        .question-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .question-number {
+            display: inline-block;
+            background: var(--color-primary-light);
+            color: var(--color-primary-dark);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .question-text {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.4;
+        }
+
+        .question-options {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .option-btn {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: var(--color-bg);
+            border: 2px solid var(--color-primary-light);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-align: left;
+        }
+
+        .option-btn:hover {
+            border-color: var(--color-primary);
+            background: var(--color-white);
+        }
+
+        .option-btn.selected {
+            border-color: var(--color-primary);
+            background: var(--color-primary-light);
+        }
+
+        .option-letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--color-white);
+            border: 2px solid var(--color-primary-light);
+            border-radius: 50%;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            flex-shrink: 0;
+        }
+
+        .option-btn.selected .option-letter {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .option-text {
+            color: var(--color-text);
+            line-height: 1.5;
+            padding-top: 4px;
+        }
+
+        /* Quiz Navigation */
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--spacing-md);
+        }
+
+        .quiz-nav .btn {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-text-light);
+            border: 2px solid var(--color-text-lighter);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-text);
+            color: var(--color-text);
+            background: transparent;
+        }
+
+        /* Hidden state */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Results Section */
+        .results-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .results-header h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .results-subtitle {
+            color: var(--color-text-light);
+            font-size: 1.125rem;
+        }
+
+        /* Primary Result Card */
+        .primary-result {
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .result-emoji {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .result-language {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .result-description {
+            color: var(--color-text-light);
+            font-size: 1.0625rem;
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.7;
+        }
+
+        .result-percentage {
+            display: inline-block;
+            background: var(--color-white);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            color: var(--color-primary-dark);
+        }
+
+        /* Score Breakdown */
+        .score-breakdown {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .score-breakdown h3 {
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .score-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .score-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .score-emoji {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .score-info {
+            flex: 1;
+        }
+
+        .score-label {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .score-bar-container {
+            height: 8px;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            background: var(--color-primary);
+            border-radius: var(--radius-full);
+            transition: width 0.5s ease;
+        }
+
+        .score-bar-fill.secondary {
+            background: var(--color-accent);
+        }
+
+        .score-value {
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            min-width: 45px;
+            text-align: right;
+        }
+
+        /* Activities Section */
+        .activities-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .activities-section h3 {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .activity-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: flex-start;
+        }
+
+        .activity-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .activity-content h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .activity-content p {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .tips-section h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .tips-list {
+            list-style: none;
+        }
+
+        .tips-list li {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-light);
+        }
+
+        .tips-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .tips-list li::before {
+            content: '💡';
+            flex-shrink: 0;
+        }
+
+        /* CTA Section */
+        .results-cta {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .results-cta h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .results-cta p {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Share buttons */
+        .share-section {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .share-section h4 {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-light);
+            font-weight: 500;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-white);
+            border: 2px solid var(--color-primary-light);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-size: 1.25rem;
+        }
+
+        .share-btn:hover {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Start Over Button */
+        .start-over {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+        }
+
+        .start-over-btn {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            font-size: 0.9375rem;
+            text-decoration: underline;
+        }
+
+        .start-over-btn:hover {
+            color: var(--color-primary-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-nav {
+                flex-direction: column;
+            }
+
+            .quiz-nav .btn {
+                max-width: none;
+            }
+
+            .question-text {
+                font-size: 1.25rem;
+            }
+
+            .result-language {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Nanny Fifi" class="logo-img">
+                <span class="logo-text">Nanny Fifi</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="love-language-quiz.html" class="active">Love Language Quiz</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#book" class="btn btn-primary nav-cta">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quiz Hero -->
+    <header class="quiz-hero">
+        <div class="container">
+            <h1>Discover Your Child's Love Language</h1>
+            <p class="quiz-hero-description">
+                Every child feels loved differently. Take this quick quiz to understand
+                how your child experiences love and get personalised activity ideas to strengthen your bond.
+            </p>
+            <div class="quiz-meta">
+                <span class="quiz-meta-item">
+                    <span>⏱️</span>
+                    <span>2 minutes</span>
+                </span>
+                <span class="quiz-meta-item">
+                    <span>📝</span>
+                    <span>15 questions</span>
+                </span>
+                <span class="quiz-meta-item">
+                    <span>🎯</span>
+                    <span>Instant results</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="section">
+        <div class="quiz-container">
+            <!-- Progress Bar -->
+            <div class="quiz-progress">
+                <div class="progress-text">
+                    <span id="progress-label">Question 1 of 15</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card" id="question-card">
+                <span class="question-number" id="question-number">Question 1</span>
+                <p class="question-text" id="question-text">Loading question...</p>
+                <div class="question-options" id="question-options">
+                    <!-- Options will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Quiz Navigation -->
+            <div class="quiz-nav">
+                <button class="btn btn-outline" id="prev-btn" disabled>
+                    <span>← Previous</span>
+                </button>
+                <button class="btn btn-primary" id="next-btn" disabled>
+                    <span>Next →</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section (Hidden by default) -->
+    <section id="results-section" class="section hidden">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Your Child's Love Language Results</h2>
+                <p class="results-subtitle">Here's how your child feels most loved and connected</p>
+            </div>
+
+            <!-- Primary Result -->
+            <div class="primary-result" id="primary-result">
+                <div class="result-emoji" id="result-emoji">❤️</div>
+                <h3 class="result-language" id="result-language">Physical Touch</h3>
+                <p class="result-description" id="result-description">
+                    Your child feels most loved through physical affection...
+                </p>
+                <span class="result-percentage" id="result-percentage">40% match</span>
+            </div>
+
+            <!-- Score Breakdown -->
+            <div class="score-breakdown">
+                <h3>All Love Languages</h3>
+                <div id="score-breakdown-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Activities Section -->
+            <div class="activities-section">
+                <h3>Activities to Try This Week</h3>
+                <div class="activities-grid" id="activities-grid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="tips-section">
+                <h3>Remember</h3>
+                <ul class="tips-list">
+                    <li>While your child has a primary love language, they benefit from all five types of love</li>
+                    <li>Love languages can shift as children grow - revisit this quiz every 6-12 months</li>
+                    <li>Observe how your child naturally shows love to others - that's often their primary language</li>
+                    <li>When your child is upset, try speaking their love language to help them feel secure</li>
+                </ul>
+            </div>
+
+            <!-- Share Section -->
+            <div class="share-section">
+                <h4>Share your results</h4>
+                <div class="share-buttons">
+                    <button class="share-btn" id="share-copy" title="Copy link">📋</button>
+                    <button class="share-btn" id="share-whatsapp" title="Share on WhatsApp">💬</button>
+                    <button class="share-btn" id="share-facebook" title="Share on Facebook">📘</button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="results-cta">
+                <h3>Want Personalised Guidance?</h3>
+                <p>
+                    Understanding your child's love language is just the beginning.
+                    Book a free call to discuss how to deepen your connection and handle parenting challenges.
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#book" class="btn btn-primary btn-large">Book Free Discovery Call</a>
+                    <a href="index.html#services" class="btn btn-secondary btn-large">View Coaching Services</a>
+                </div>
+            </div>
+
+            <!-- Start Over -->
+            <div class="start-over">
+                <button class="start-over-btn" id="start-over-btn">Take the quiz again</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.jpg" alt="Nanny Fifi" class="logo-img">
+                        <span class="logo-text">Nanny Fifi</span>
+                    </a>
+                    <p>Helping parents raise happy, confident children through gentle guidance and expert support.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/nanny_fifi" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="love-language-quiz.html">Love Language Quiz</a></li>
+                            <li><a href="index.html#book">Book a Call</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="behaviour-emotions.html">Behaviour & Emotions</a></li>
+                            <li><a href="routines-daily-life.html">Sleep, Meals & Routines</a></li>
+                            <li><a href="confidence-transitions.html">Confidence & Transitions</a></li>
+                            <li><a href="parental-wellbeing.html">Parental Wellbeing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nanny Fifi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // ===== Love Language Quiz =====
+
+        // Quiz Questions Data
+        const questions = [
+            {
+                text: "When your child comes home from nursery or school, what do they seem to want most?",
+                options: [
+                    { text: "A big hug and to sit close to you", type: "touch" },
+                    { text: "To tell you all about their day while you listen", type: "time" }
+                ]
+            },
+            {
+                text: "How does your child typically show affection to family members or friends?",
+                options: [
+                    { text: "Giving hugs, kisses, or physical closeness", type: "touch" },
+                    { text: "Making cards, drawings, or giving small gifts", type: "gifts" }
+                ]
+            },
+            {
+                text: "What makes your child's face light up the most?",
+                options: [
+                    { text: "When you say 'I'm so proud of you' or give specific praise", type: "words" },
+                    { text: "When you help them with something they're struggling with", type: "service" }
+                ]
+            },
+            {
+                text: "When your child is upset, what usually helps them feel better?",
+                options: [
+                    { text: "Being held, cuddled, or having their back rubbed", type: "touch" },
+                    { text: "Hearing reassuring words like 'You're going to be okay'", type: "words" }
+                ]
+            },
+            {
+                text: "How does your child react when you can't spend time with them?",
+                options: [
+                    { text: "They ask 'Can we play together?' or seem to crave your attention", type: "time" },
+                    { text: "They ask you to do something for them or get upset when you're busy", type: "service" }
+                ]
+            },
+            {
+                text: "What does your child appreciate most about special occasions?",
+                options: [
+                    { text: "The gifts and surprises they receive", type: "gifts" },
+                    { text: "Spending the whole day doing fun activities together", type: "time" }
+                ]
+            },
+            {
+                text: "How does your child respond to compliments and encouragement?",
+                options: [
+                    { text: "They beam with pride and often repeat what you said", type: "words" },
+                    { text: "They seem happy but quickly want to move on to an activity together", type: "time" }
+                ]
+            },
+            {
+                text: "What does your child do when they want to show you they love you?",
+                options: [
+                    { text: "They help you with tasks or try to make things easier for you", type: "service" },
+                    { text: "They want to hold hands, cuddle, or be physically close", type: "touch" }
+                ]
+            },
+            {
+                text: "When going somewhere new or scary, what does your child need most?",
+                options: [
+                    { text: "To hold your hand or stay physically close to you", type: "touch" },
+                    { text: "To hear you explain what will happen and that they'll be fine", type: "words" }
+                ]
+            },
+            {
+                text: "What would your child find most meaningful?",
+                options: [
+                    { text: "A thoughtful small gift that shows you were thinking of them", type: "gifts" },
+                    { text: "You helping them with a project or preparing something special for them", type: "service" }
+                ]
+            },
+            {
+                text: "How does your child typically respond to negative feedback?",
+                options: [
+                    { text: "They seem deeply hurt by critical words and take them to heart", type: "words" },
+                    { text: "They recover quickly if you follow up with physical comfort", type: "touch" }
+                ]
+            },
+            {
+                text: "When your child has something to share (artwork, achievement, story), they want you to:",
+                options: [
+                    { text: "Give them your complete, undivided attention", type: "time" },
+                    { text: "Praise them enthusiastically with specific words", type: "words" }
+                ]
+            },
+            {
+                text: "What does your child treasure most?",
+                options: [
+                    { text: "Small keepsakes, collected items, or gifts from loved ones", type: "gifts" },
+                    { text: "Memories of special times spent together", type: "time" }
+                ]
+            },
+            {
+                text: "When your child is tired at the end of the day, they prefer:",
+                options: [
+                    { text: "Cuddling on the sofa or being carried to bed", type: "touch" },
+                    { text: "Having you help them get ready and tuck them in with care", type: "service" }
+                ]
+            },
+            {
+                text: "How does your child react when they receive a surprise gift?",
+                options: [
+                    { text: "They're absolutely thrilled and treasure it for ages", type: "gifts" },
+                    { text: "They're happy but seem more excited that you thought of them", type: "words" }
+                ]
+            }
+        ];
+
+        // Love Language Data
+        const loveLanguages = {
+            touch: {
+                name: "Physical Touch",
+                emoji: "🤗",
+                description: "Your child feels most loved through physical affection. Hugs, cuddles, high-fives, and gentle touches make them feel secure and connected. Physical closeness is their way of feeling your love in a tangible way.",
+                activities: [
+                    { icon: "🤗", title: "Morning Hugs", desc: "Start each day with a big, warm hug before they get out of bed" },
+                    { icon: "✋", title: "Secret Handshake", desc: "Create a special handshake just for the two of you" },
+                    { icon: "💆", title: "Gentle Massage", desc: "Give a calming back rub or foot massage before bedtime" },
+                    { icon: "💃", title: "Dance Together", desc: "Put on music and dance around the living room together" },
+                    { icon: "📖", title: "Cuddle Reading", desc: "Read books together while snuggled on the sofa" },
+                    { icon: "🎮", title: "Active Play", desc: "Engage in physical games like tickle fights or piggyback rides" }
+                ]
+            },
+            words: {
+                name: "Words of Affirmation",
+                emoji: "💬",
+                description: "Your child thrives on verbal encouragement and praise. Hearing 'I love you', 'I'm proud of you', and specific compliments about their efforts makes them feel valued and confident. They may be sensitive to harsh words.",
+                activities: [
+                    { icon: "📝", title: "Lunch Box Notes", desc: "Write encouraging notes to slip into their bag or lunchbox" },
+                    { icon: "🌟", title: "Specific Praise", desc: "Notice and name specific things they do well each day" },
+                    { icon: "📖", title: "Bedtime Affirmations", desc: "End each day telling them 3 things you love about them" },
+                    { icon: "🎵", title: "Sing Their Praises", desc: "Make up silly songs about how wonderful they are" },
+                    { icon: "💌", title: "Mirror Messages", desc: "Write encouraging words on the bathroom mirror" },
+                    { icon: "📞", title: "Check-in Calls", desc: "When apart, call just to say you're thinking of them" }
+                ]
+            },
+            time: {
+                name: "Quality Time",
+                emoji: "⏰",
+                description: "Your child feels most loved when they have your undivided attention. Putting away distractions and being fully present with them - whether playing, talking, or just being together - fills their emotional tank.",
+                activities: [
+                    { icon: "📅", title: "One-on-One Dates", desc: "Schedule regular special time just for the two of you" },
+                    { icon: "🎲", title: "Game Time", desc: "Play their favourite board games or activities together" },
+                    { icon: "🍳", title: "Cook Together", desc: "Let them help prepare meals, even if it takes longer" },
+                    { icon: "🚶", title: "Daily Walks", desc: "Take short walks together and let them lead the conversation" },
+                    { icon: "🎨", title: "Create Together", desc: "Do arts and crafts or build something side by side" },
+                    { icon: "📵", title: "Phone-Free Time", desc: "Set aside time each day where devices are put away" }
+                ]
+            },
+            gifts: {
+                name: "Receiving Gifts",
+                emoji: "🎁",
+                description: "Your child feels loved through thoughtful gifts - not expensive ones, but meaningful tokens that show you were thinking of them. They treasure keepsakes and often attach emotional significance to objects.",
+                activities: [
+                    { icon: "🌸", title: "Nature Treasures", desc: "Collect special rocks, leaves, or flowers for them on walks" },
+                    { icon: "🧸", title: "Just Because", desc: "Surprise them with small treats 'just because you love them'" },
+                    { icon: "📦", title: "Memory Box", desc: "Create a special box to store treasured items together" },
+                    { icon: "🎨", title: "Handmade Gifts", desc: "Make simple crafts or drawings for them" },
+                    { icon: "📸", title: "Photo Gifts", desc: "Print photos of special moments to give them" },
+                    { icon: "🏪", title: "Choosing Together", desc: "Let them pick a small item when running errands together" }
+                ]
+            },
+            service: {
+                name: "Acts of Service",
+                emoji: "🛠️",
+                description: "Your child feels loved when you do things to help them or make their life easier. Helping with tasks, preparing their favourite meal, or fixing something important to them shows you care deeply.",
+                activities: [
+                    { icon: "🍎", title: "Special Breakfast", desc: "Prepare their favourite breakfast as a surprise" },
+                    { icon: "🔧", title: "Fix It Together", desc: "Help repair a broken toy or solve a problem they have" },
+                    { icon: "📚", title: "Homework Help", desc: "Sit with them and help with challenging tasks" },
+                    { icon: "🛏️", title: "Room Makeover", desc: "Help organise or redecorate their space together" },
+                    { icon: "🎒", title: "Preparation Help", desc: "Help them prepare for activities or special events" },
+                    { icon: "✨", title: "Teach Skills", desc: "Patiently teach them something new they want to learn" }
+                ]
+            }
+        };
+
+        // Quiz State
+        let currentQuestion = 0;
+        let answers = [];
+        let scores = { touch: 0, words: 0, time: 0, gifts: 0, service: 0 };
+
+        // DOM Elements
+        const quizSection = document.getElementById('quiz-section');
+        const resultsSection = document.getElementById('results-section');
+        const questionCard = document.getElementById('question-card');
+        const questionNumber = document.getElementById('question-number');
+        const questionText = document.getElementById('question-text');
+        const questionOptions = document.getElementById('question-options');
+        const progressLabel = document.getElementById('progress-label');
+        const progressPercent = document.getElementById('progress-percent');
+        const progressFill = document.getElementById('progress-fill');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // Initialize Quiz
+        function initQuiz() {
+            currentQuestion = 0;
+            answers = [];
+            scores = { touch: 0, words: 0, time: 0, gifts: 0, service: 0 };
+            showQuestion();
+        }
+
+        // Show Question
+        function showQuestion() {
+            const question = questions[currentQuestion];
+            const progress = ((currentQuestion) / questions.length) * 100;
+
+            // Update progress
+            progressLabel.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            progressPercent.textContent = `${Math.round(progress)}%`;
+            progressFill.style.width = `${progress}%`;
+
+            // Update question
+            questionNumber.textContent = `Question ${currentQuestion + 1}`;
+            questionText.textContent = question.text;
+
+            // Create options
+            questionOptions.innerHTML = question.options.map((option, index) => {
+                const letter = index === 0 ? 'A' : 'B';
+                const isSelected = answers[currentQuestion] === option.type;
+                return `
+                    <button class="option-btn ${isSelected ? 'selected' : ''}" data-type="${option.type}">
+                        <span class="option-letter">${letter}</span>
+                        <span class="option-text">${option.text}</span>
+                    </button>
+                `;
+            }).join('');
+
+            // Add click handlers
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.addEventListener('click', () => selectOption(btn));
+            });
+
+            // Update navigation
+            prevBtn.disabled = currentQuestion === 0;
+            nextBtn.disabled = !answers[currentQuestion];
+            nextBtn.innerHTML = currentQuestion === questions.length - 1
+                ? '<span>See Results</span>'
+                : '<span>Next →</span>';
+        }
+
+        // Select Option
+        function selectOption(btn) {
+            // Remove selected from all
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+
+            // Add selected to clicked
+            btn.classList.add('selected');
+
+            // Store answer
+            answers[currentQuestion] = btn.dataset.type;
+
+            // Enable next button
+            nextBtn.disabled = false;
+        }
+
+        // Navigate
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (!answers[currentQuestion]) return;
+
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        });
+
+        // Calculate and Show Results
+        function showResults() {
+            // Calculate scores
+            answers.forEach(type => {
+                if (type) scores[type]++;
+            });
+
+            // Find primary love language
+            const sortedLanguages = Object.entries(scores)
+                .sort((a, b) => b[1] - a[1]);
+
+            const primaryType = sortedLanguages[0][0];
+            const primary = loveLanguages[primaryType];
+            const maxScore = questions.length;
+
+            // Hide quiz, show results
+            quizSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+
+            // Scroll to top of results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Populate primary result
+            document.getElementById('result-emoji').textContent = primary.emoji;
+            document.getElementById('result-language').textContent = primary.name;
+            document.getElementById('result-description').textContent = primary.description;
+            document.getElementById('result-percentage').textContent =
+                `${Math.round((scores[primaryType] / maxScore) * 100)}% match`;
+
+            // Populate score breakdown
+            const breakdownHtml = sortedLanguages.map(([type, score], index) => {
+                const lang = loveLanguages[type];
+                const percentage = (score / maxScore) * 100;
+                return `
+                    <div class="score-item">
+                        <span class="score-emoji">${lang.emoji}</span>
+                        <div class="score-info">
+                            <div class="score-label">${lang.name}</div>
+                            <div class="score-bar-container">
+                                <div class="score-bar-fill ${index > 0 ? 'secondary' : ''}" style="width: ${percentage}%"></div>
+                            </div>
+                        </div>
+                        <span class="score-value">${Math.round(percentage)}%</span>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('score-breakdown-list').innerHTML = breakdownHtml;
+
+            // Populate activities
+            const activitiesHtml = primary.activities.map(activity => `
+                <div class="activity-card">
+                    <span class="activity-icon">${activity.icon}</span>
+                    <div class="activity-content">
+                        <h4>${activity.title}</h4>
+                        <p>${activity.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('activities-grid').innerHTML = activitiesHtml;
+
+            // Track quiz completion in Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'quiz_complete', {
+                    'event_category': 'Love Language Quiz',
+                    'event_label': primary.name
+                });
+            }
+        }
+
+        // Share Functionality
+        document.getElementById('share-copy').addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copied to clipboard!');
+        });
+
+        document.getElementById('share-whatsapp').addEventListener('click', () => {
+            const text = "I just discovered my child's love language! Take the free quiz:";
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + window.location.href)}`, '_blank');
+        });
+
+        document.getElementById('share-facebook').addEventListener('click', () => {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+        });
+
+        // Start Over
+        document.getElementById('start-over-btn').addEventListener('click', () => {
+            resultsSection.classList.add('hidden');
+            quizSection.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            initQuiz();
+        });
+
+        // Initialize on load
+        initQuiz();
+    </script>
+</body>
+</html>
