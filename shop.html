@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJFNH2HBF2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HJFNH2HBF2');
+    </script>
+
+    <meta name="description" content="Shop digital parenting resources from Nanny Fifi. Baby Led Weaning Guide with 50+ recipes, meal plans, and expert tips.">
+    <meta name="keywords" content="baby led weaning guide, BLW recipes, baby food guide, weaning ebook, parenting resources, digital download">
+    <meta name="author" content="Sofia Kavouri - Nanny Fifi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nannyfifi.com/shop.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nannyfifi.com/shop.html">
+    <meta property="og:title" content="Shop | Nanny Fifi - Parenting Resources">
+    <meta property="og:description" content="Digital parenting resources including the Baby Led Weaning Guide with 50+ recipes.">
+    <meta property="og:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
+
+    <title>Shop | Nanny Fifi - Digital Parenting Resources</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+    <style>
+        /* Shop Page Specific Styles */
+        .shop-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-secondary) 100%);
+        }
+
+        .shop-hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .shop-hero p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-section {
+            padding: 60px 0 100px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: var(--color-primary-light);
+        }
+
+        .product-content {
+            padding: 30px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+
+        .product-description {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 25px;
+            padding: 0;
+        }
+
+        .product-features li {
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-success);
+            font-weight: bold;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .price-current {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text);
+            font-family: var(--font-heading);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .product-cta {
+            width: 100%;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-buy {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .btn-buy:hover {
+            background: var(--color-primary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .coming-soon-card {
+            background: var(--color-bg-alt);
+            border: 2px dashed var(--color-primary-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .coming-soon-card h3 {
+            color: var(--color-text-light);
+            margin-bottom: 10px;
+        }
+
+        .coming-soon-card p {
+            color: var(--color-text-lighter);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-primary-light);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .shop-hero {
+                padding: 100px 20px 40px;
+            }
+
+            .products-section {
+                padding: 40px 20px 80px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Nanny Fifi" class="logo-img">
+                <span class="logo-text">Nanny Fifi</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="love-language-quiz.html">Love Language Quiz</a></li>
+                <li><a href="index.html#book" class="btn btn-primary nav-cta">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1>Shop</h1>
+            <p>Expert parenting resources to support your journey, created with love by Nanny Fifi</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- BLW Guide Product -->
+                <div class="product-card">
+                    <img src="BLW/baby sitting on high chair to eat.jpg" alt="Baby Led Weaning Guide" class="product-image">
+                    <div class="product-content">
+                        <span class="product-badge">Digital Download</span>
+                        <h2 class="product-title">Baby Led Weaning Guide</h2>
+                        <p class="product-description">A comprehensive, calm guide to baby led weaning from 6 to 24 months. Everything you need to start your weaning journey with confidence.</p>
+
+                        <ul class="product-features">
+                            <li>50+ easy, family-friendly recipes</li>
+                            <li>Age-specific serving guides (6-24 months)</li>
+                            <li>Dietary tags & allergy swaps for every recipe</li>
+                            <li>Picky eater tips throughout</li>
+                            <li>First foods cheat sheet (print for your fridge!)</li>
+                            <li>Safety guide: gagging vs choking</li>
+                            <li>Printable meal trackers</li>
+                            <li>FAQ section for common worries</li>
+                        </ul>
+
+                        <div class="product-price">
+                            <span class="price-current">£12.99</span>
+                            <span class="price-note">Instant PDF download</span>
+                        </div>
+
+                        <a href="#" class="product-cta btn-buy" id="buy-blw-guide">Buy Now</a>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Card -->
+                <div class="product-card coming-soon-card">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-primary-light); margin-bottom: 20px;">
+                        <path d="M12 6v6l4 2"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    <h3>More Resources Coming Soon</h3>
+                    <p>Meal planners, printable trackers, and more expert guides in development.</p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                    </svg>
+                    <span>Secure Payment</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    <span>Instant Download</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span>Created by Experts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="images/logo.jpg" alt="Nanny Fifi" class="logo-img">
+                        <span class="logo-text">Nanny Fifi</span>
+                    </a>
+                    <p>Helping parents raise happy, confident children through gentle guidance and expert support.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/nanny_fifi" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="love-language-quiz.html">Love Language Quiz</a></li>
+                            <li><a href="index.html#book">Book a Call</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="behaviour-emotions.html">Behaviour & Emotions</a></li>
+                            <li><a href="routines-daily-life.html">Sleep, Meals & Routines</a></li>
+                            <li><a href="confidence-transitions.html">Confidence & Transitions</a></li>
+                            <li><a href="parental-wellbeing.html">Parental Wellbeing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nanny Fifi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // BLW Guide purchase button - Update with Stripe link when ready
+        document.getElementById('buy-blw-guide').addEventListener('click', function(e) {
+            e.preventDefault();
+            // TODO: Replace with actual Stripe payment link
+            alert('Payment link coming soon! Please contact contact.nannyfifi@gmail.com to purchase.');
+            // window.location.href = 'YOUR_STRIPE_PAYMENT_LINK';
+        });
+    </script>
+</body>
+</html>
