@@ -34,6 +34,7 @@ Parent coaching website for Sofia Kavouri (Nanny Fifi).
 | File | Description |
 |------|-------------|
 | index.html | Main landing page with services and pricing |
+| shop.html | Digital products shop (BLW Guide, etc.) |
 | love-language-quiz.html | Interactive quiz to discover child's love language |
 | behaviour-emotions.html | Behaviour & Emotions service page |
 | routines-daily-life.html | Sleep, Meals & Routines service page |
@@ -60,6 +61,57 @@ Parent coaching website for Sofia Kavouri (Nanny Fifi).
 - Priority response times
 - Cancel anytime
 - Marked as "Most Popular" on pricing section
+
+---
+
+## Shop & Digital Products
+
+**URL:** https://nannyfifi.com/shop.html
+
+The shop page sells digital parenting resources as instant PDF downloads.
+
+### Baby Led Weaning Guide
+
+| Item | Details |
+|------|---------|
+| **Product** | Baby Led Weaning Guide (PDF) |
+| **Price** | £12.99 |
+| **Type** | One-time purchase, instant download |
+| **Stripe Link** | https://buy.stripe.com/3cIcN64i3bJt9ITgEse7m04 |
+| **Redirect After Payment** | https://nannyfifi.com/thank-you.html |
+
+**What's Included:**
+- 50+ baby-friendly recipes
+- Age-by-age feeding guides (6-12 months)
+- First foods checklist
+- Allergen introduction tracker
+- Meal planning templates
+- Choking vs gagging guide
+- Emergency reference card
+
+**Product Image:** `BLW/baby sitting on high chair to eat.jpg`
+
+### Adding New Products
+
+To add a new digital product to the shop:
+
+1. **Create Stripe Payment Link:**
+   - Go to Stripe Dashboard → Payment Links → New
+   - Add product name and price (GBP, one-time)
+   - Set redirect URL to `https://nannyfifi.com/thank-you.html`
+   - Copy the payment link
+
+2. **Update shop.html:**
+   - Duplicate the existing product card HTML
+   - Update product name, description, price, image
+   - Replace the `href` in the Buy Now button with new Stripe link
+
+3. **Commit & Push:**
+   ```bash
+   git add shop.html
+   git commit -m "Add new product"
+   git push origin main
+   ```
 
 ---
 
@@ -197,7 +249,11 @@ Pricing grid: 5 columns for 5 pricing options (responsive to stack on mobile)
 5. **Love Language Quiz**
    - User completes quiz -> Results with activities -> Discovery call CTA
 
-6. **Contact Form**
+6. **Shop Purchase (Digital Products)**
+   - User clicks "Buy Now" -> Stripe payment -> Thank You page
+   - PDF delivery: Manual email from Sofia with download link
+
+7. **Contact Form**
    - User fills form -> Formspree -> Email to contact.nannyfifi@gmail.com
 
 ---
@@ -209,4 +265,4 @@ Pricing grid: 5 columns for 5 pricing options (responsive to stack on mobile)
 
 ---
 
-*Last updated: December 2024*
+*Last updated: January 2026*
