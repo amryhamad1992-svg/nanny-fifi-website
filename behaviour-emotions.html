@@ -13,19 +13,33 @@
         gtag('config', 'G-HJFNH2HBF2');
     </script>
     <meta name="description" content="Help your child manage tantrums, set healthy boundaries, and regulate big emotions with expert parent coaching from Nanny Fifi.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nannyfifi.com/behaviour-emotions.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nannyfifi.com/behaviour-emotions.html">
+    <meta property="og:title" content="Behaviour & Big Emotions Coaching | Nanny Fifi">
+    <meta property="og:description" content="Help your child manage tantrums, set healthy boundaries, and regulate big emotions with expert parent coaching from Nanny Fifi.">
+    <meta property="og:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Behaviour & Big Emotions Coaching | Nanny Fifi">
+    <meta name="twitter:description" content="Help your child manage tantrums, set healthy boundaries, and regulate big emotions with expert parent coaching from Nanny Fifi.">
+    <meta name="twitter:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
     <title>Behaviour & Big Emotions Coaching | Nanny Fifi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="images/logo.webp">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nannyfifi.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://nannyfifi.com/#services"},{"@type":"ListItem","position":3,"name":"Behaviour & Big Emotions","item":"https://nannyfifi.com/behaviour-emotions.html"}]}
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.jpg" alt="Nanny Fifi" class="logo-img">
+                <img src="images/logo.webp" alt="Nanny Fifi" class="logo-img">
                 <span class="logo-text">Nanny Fifi</span>
             </a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -209,5 +223,21 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#4A3F3A; color:#fff; padding:1rem 1.5rem; z-index:10000; font-family:'Inter',sans-serif; font-size:0.9rem;">
+        <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+            <p style="margin:0; flex:1; min-width:250px;">We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to our use of cookies.</p>
+            <div style="display:flex; gap:0.5rem;">
+                <button onclick="acceptCookies()" style="background:#E8A598; color:#4A3F3A; border:none; padding:0.5rem 1.25rem; border-radius:6px; cursor:pointer; font-weight:600; font-size:0.85rem;">Accept</button>
+                <button onclick="declineCookies()" style="background:transparent; color:#fff; border:1px solid #fff; padding:0.5rem 1.25rem; border-radius:6px; cursor:pointer; font-weight:600; font-size:0.85rem;">Decline</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    function acceptCookies(){document.cookie="cookie_consent=accepted;path=/;max-age=31536000";document.getElementById('cookie-consent').style.display='none';}
+    function declineCookies(){document.cookie="cookie_consent=declined;path=/;max-age=31536000";document.getElementById('cookie-consent').style.display='none';window['ga-disable-G-HJFNH2HBF2']=true;}
+    (function(){var c=document.cookie.match(/cookie_consent=([^;]+)/);if(c){if(c[1]==='declined')window['ga-disable-G-HJFNH2HBF2']=true;}else{document.getElementById('cookie-consent').style.display='block';}})();
+    </script>
 </body>
 </html>
