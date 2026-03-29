@@ -142,7 +142,7 @@ Rules:
 5. Naturally weave in relevant search keywords throughout
 6. End with encouragement and a warm sign-off
 
-Return your response as JSON with this exact structure (no markdown, just raw JSON):
+CRITICAL: Return ONLY raw JSON (no markdown, no backticks, no explanation). All strings must be on a single line — use \\n for newlines inside strings. Escape all quotes inside strings with \\". Structure:
 {
     "title": "Article Title: Subtitle If Needed",
     "metaDescription": "150-160 character description with target keywords",
@@ -181,7 +181,34 @@ For internal links in the content, use these paths:
     // Extract JSON from response (handle possible markdown wrapping)
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error('AI did not return valid JSON');
-    const result = JSON.parse(jsonMatch[0]);
+
+    // Clean up common JSON issues from AI output
+    let jsonStr = jsonMatch[0];
+    // Fix unescaped newlines inside string values
+    jsonStr = jsonStr.replace(/(?<=:\s*")([\s\S]*?)(?="(?:\s*[,}]))/g, (match) => {
+        return match.replace(/\n/g, '\\n').replace(/\r/g, '\\r').replace(/\t/g, '\\t');
+    });
+
+    let result;
+    try {
+        result = JSON.parse(jsonStr);
+    } catch (e) {
+        // Second attempt: try to fix by extracting fields individually
+        const extract = (field) => {
+            const m = text.match(new RegExp(`"${field}"\\s*:\\s*"([\\s\\S]*?)(?:"|$)\\s*(?:,|\\})`));
+            return m ? m[1].replace(/\\"/g, '"').replace(/\n/g, ' ') : '';
+        };
+        result = {
+            title: extract('title'),
+            metaDescription: extract('metaDescription'),
+            slug: extract('slug'),
+            readTime: extract('readTime') || '5 min read',
+            keywords: extract('keywords'),
+            content: extract('content'),
+            relatedService: extract('relatedService'),
+            relatedServiceText: extract('relatedServiceText')
+        };
+    }
     return result;
 }
 
@@ -493,8 +520,9 @@ async function main() {
     // Preview URL
     console.log(`\n  Preview: ${SITE_URL}/blog/${article.slug}.html\n`);
 
-    // Ask to push
-    const pushAnswer = await ask(rl, '  Push to GitHub and make it live? (y/n): ');
+    // Ask to push (skip if non-interactive / CLI mode with --caption)
+    const isCliMode = process.argv.includes('--caption') || process.argv.includes('--image');
+    const pushAnswer = isCliMode ? 'n' : await ask(rl, '  Push to GitHub and make it live? (y/n): ');
 
     if (pushAnswer.toLowerCase() === 'y') {
         console.log('\n  Pushing to GitHub...');
