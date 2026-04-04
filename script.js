@@ -125,7 +125,64 @@ if (savedCurrency) {
 }
 
 // ===== Contact Form Handling =====
-// Form now submits directly to Formspree - no JavaScript handling needed
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        const formData = {
+            name: contactForm.querySelector('#name').value.trim(),
+            email: contactForm.querySelector('#email').value.trim(),
+            message: contactForm.querySelector('#message').value.trim(),
+            source: 'website_form',
+        };
+
+        try {
+            const res = await fetch('https://nannyfifi-backend-production.up.railway.app/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (!res.ok) throw new Error('Server error');
+
+            // Also send to Formspree so Sofia gets the email notification
+            fetch('https://formspree.io/f/xlgrbpod', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    _subject: 'New enquiry from Nanny Fifi website',
+                }),
+            }).catch(() => {}); // fire-and-forget
+
+            contactForm.innerHTML = `
+                <div style="text-align:center; padding:2rem 0;">
+                    <h3 style="color:#7D6E66; margin-bottom:0.5rem;">Message Sent!</h3>
+                    <p style="color:#A09490;">Thanks ${formData.name.split(' ')[0]}, Sofia will get back to you soon.</p>
+                </div>`;
+        } catch {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            const err = document.createElement('p');
+            err.style.cssText = 'color:#e74c3c; text-align:center; margin-top:0.5rem; font-size:0.9rem;';
+            err.textContent = 'Something went wrong. Please try again.';
+            // Remove existing error if any
+            const existing = contactForm.querySelector('.form-error');
+            if (existing) existing.remove();
+            err.className = 'form-error';
+            submitBtn.after(err);
+        }
+    });
+}
 
 // ===== Intersection Observer for Animations =====
 const observerOptions = {
