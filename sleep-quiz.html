@@ -12,22 +12,22 @@
         gtag('js', new Date());
         gtag('config', 'G-HJFNH2HBF2');
     </script>
-    <meta name="description" content="Discover your child's love language with our free quiz. Learn how your child feels most loved and get personalised activity ideas to strengthen your bond.">
-    <meta name="keywords" content="child love language quiz, 5 love languages children, how does my child feel loved, parent child bonding, parenting quiz">
+    <meta name="description" content="Struggling with bedtime? Take our free quiz to discover your child's sleep profile and get personalised tips for calmer, easier bedtimes.">
+    <meta name="keywords" content="child sleep quiz, bedtime routine quiz, toddler sleep problems, child won't sleep, bedtime struggles, sleep tips for kids">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nannyfifi.com/love-language-quiz.html">
-    <meta property="og:title" content="Discover Your Child's Love Language | Free Quiz">
-    <meta property="og:description" content="Take our free 2-minute quiz to discover how your child feels most loved. Get personalised activity ideas to strengthen your bond.">
+    <meta property="og:url" content="https://nannyfifi.com/sleep-quiz.html">
+    <meta property="og:title" content="What's Your Child's Sleep Profile? | Free Quiz">
+    <meta property="og:description" content="Take our free 3-minute quiz to understand your child's bedtime behaviour and get personalised tips for calmer evenings.">
     <meta property="og:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Discover Your Child's Love Language | Free Quiz | Nanny Fifi">
-    <meta name="twitter:description" content="Take our free 2-minute quiz to discover how your child feels most loved. Get personalised activity ideas to strengthen your bond.">
+    <meta name="twitter:title" content="What's Your Child's Sleep Profile? | Free Quiz | Nanny Fifi">
+    <meta name="twitter:description" content="Take our free 3-minute quiz to understand your child's bedtime behaviour and get personalised tips for calmer evenings.">
     <meta name="twitter:image" content="https://nannyfifi.com/images/sofia-profile.jpg">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://nannyfifi.com/love-language-quiz.html">
-    <title>Discover Your Child's Love Language | Free Quiz | Nanny Fifi</title>
+    <link rel="canonical" href="https://nannyfifi.com/sleep-quiz.html">
+    <title>What's Your Child's Sleep Profile? | Free Quiz | Nanny Fifi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     <style>
         /* Quiz-specific styles */
         .quiz-hero {
-            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
+            background: linear-gradient(135deg, #E8DEF8 0%, #F5D5CE 100%);
             padding: 120px 0 var(--spacing-xl);
             text-align: center;
         }
@@ -97,7 +97,7 @@
 
         .progress-fill {
             height: 100%;
-            background: var(--color-primary);
+            background: #B8A9D4;
             border-radius: var(--radius-full);
             transition: width 0.3s ease;
         }
@@ -113,8 +113,8 @@
 
         .question-number {
             display: inline-block;
-            background: var(--color-primary-light);
-            color: var(--color-primary-dark);
+            background: #E8DEF8;
+            color: #5B4A8A;
             padding: var(--spacing-xs) var(--spacing-md);
             border-radius: var(--radius-full);
             font-size: 0.875rem;
@@ -142,7 +142,7 @@
             gap: var(--spacing-md);
             padding: var(--spacing-md) var(--spacing-lg);
             background: var(--color-bg);
-            border: 2px solid var(--color-primary-light);
+            border: 2px solid #E8DEF8;
             border-radius: var(--radius-md);
             cursor: pointer;
             transition: all var(--transition-fast);
@@ -150,13 +150,13 @@
         }
 
         .option-btn:hover {
-            border-color: var(--color-primary);
+            border-color: #B8A9D4;
             background: var(--color-white);
         }
 
         .option-btn.selected {
-            border-color: var(--color-primary);
-            background: var(--color-primary-light);
+            border-color: #B8A9D4;
+            background: #F3EEFA;
         }
 
         .option-letter {
@@ -166,16 +166,16 @@
             width: 32px;
             height: 32px;
             background: var(--color-white);
-            border: 2px solid var(--color-primary-light);
+            border: 2px solid #E8DEF8;
             border-radius: 50%;
             font-weight: 600;
-            color: var(--color-primary-dark);
+            color: #5B4A8A;
             flex-shrink: 0;
         }
 
         .option-btn.selected .option-letter {
-            background: var(--color-primary);
-            border-color: var(--color-primary);
+            background: #B8A9D4;
+            border-color: #B8A9D4;
             color: var(--color-white);
         }
 
@@ -212,330 +212,6 @@
         /* Hidden state */
         .hidden {
             display: none !important;
-        }
-
-        /* Results Section */
-        .results-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--spacing-xl) var(--spacing-md);
-        }
-
-        .results-header {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .results-header h2 {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .results-subtitle {
-            color: var(--color-text-light);
-            font-size: 1.125rem;
-        }
-
-        /* Primary Result Card */
-        .primary-result {
-            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .result-emoji {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .result-language {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--color-text);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .result-description {
-            color: var(--color-text-light);
-            font-size: 1.0625rem;
-            max-width: 600px;
-            margin: 0 auto var(--spacing-lg);
-            line-height: 1.7;
-        }
-
-        .result-percentage {
-            display: inline-block;
-            background: var(--color-white);
-            padding: var(--spacing-xs) var(--spacing-md);
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            color: var(--color-primary-dark);
-        }
-
-        /* Score Breakdown */
-        .score-breakdown {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .score-breakdown h3 {
-            margin-bottom: var(--spacing-lg);
-            text-align: center;
-        }
-
-        .score-item {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .score-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .score-emoji {
-            font-size: 1.5rem;
-            width: 40px;
-            text-align: center;
-        }
-
-        .score-info {
-            flex: 1;
-        }
-
-        .score-label {
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-
-        .score-bar-container {
-            height: 8px;
-            background: var(--color-bg-alt);
-            border-radius: var(--radius-full);
-            overflow: hidden;
-        }
-
-        .score-bar-fill {
-            height: 100%;
-            background: var(--color-primary);
-            border-radius: var(--radius-full);
-            transition: width 0.5s ease;
-        }
-
-        .score-bar-fill.secondary {
-            background: var(--color-accent);
-        }
-
-        .score-value {
-            font-weight: 600;
-            color: var(--color-primary-dark);
-            min-width: 45px;
-            text-align: right;
-        }
-
-        /* Activities Section */
-        .activities-section {
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .activities-section h3 {
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .activities-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-        }
-
-        .activity-card {
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-md);
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            gap: var(--spacing-sm);
-            align-items: flex-start;
-        }
-
-        .activity-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .activity-content h4 {
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-
-        .activity-content p {
-            font-size: 0.875rem;
-            color: var(--color-text-light);
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        /* Tips Section */
-        .tips-section {
-            background: var(--color-bg-alt);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .tips-section h3 {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .tips-list {
-            list-style: none;
-        }
-
-        .tips-list li {
-            display: flex;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-sm);
-            color: var(--color-text-light);
-        }
-
-        .tips-list li:last-child {
-            margin-bottom: 0;
-        }
-
-        .tips-list li::before {
-            content: '💡';
-            flex-shrink: 0;
-        }
-
-        /* CTA Section */
-        .results-cta {
-            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            text-align: center;
-        }
-
-        .results-cta h3 {
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .results-cta p {
-            color: var(--color-text-light);
-            margin-bottom: var(--spacing-lg);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: var(--spacing-md);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Share buttons */
-        .share-section {
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .share-section h4 {
-            margin-bottom: var(--spacing-md);
-            color: var(--color-text-light);
-            font-weight: 500;
-        }
-
-        .share-buttons {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-sm);
-        }
-
-        .share-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--color-white);
-            border: 2px solid var(--color-primary-light);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            font-size: 1.25rem;
-        }
-
-        .share-btn:hover {
-            background: var(--color-primary);
-            border-color: var(--color-primary);
-            transform: translateY(-2px);
-        }
-
-        /* Start Over Button */
-        .start-over {
-            text-align: center;
-            margin-top: var(--spacing-lg);
-        }
-
-        .start-over-btn {
-            background: none;
-            border: none;
-            color: var(--color-text-light);
-            cursor: pointer;
-            font-size: 0.9375rem;
-            text-decoration: underline;
-        }
-
-        .start-over-btn:hover {
-            color: var(--color-primary-dark);
-        }
-
-        /* Discovery Call CTA */
-        .discovery-cta-box {
-            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            text-align: center;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .discovery-icon {
-            font-size: 3rem;
-            margin-bottom: var(--spacing-md);
-        }
-
-        .discovery-cta-box h3 {
-            margin-bottom: var(--spacing-sm);
-            color: var(--color-text);
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-        }
-
-        .discovery-cta-box > p {
-            color: var(--color-text-light);
-            margin-bottom: var(--spacing-lg);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-
-        .discovery-cta-box .btn {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .discovery-note {
-            display: block;
-            font-size: 0.875rem;
-            color: var(--color-text-light);
-            opacity: 0.9;
         }
 
         /* Email Capture Modal */
@@ -605,7 +281,7 @@
         .email-form-group input {
             width: 100%;
             padding: 12px 16px;
-            border: 2px solid var(--color-primary-light);
+            border: 2px solid #E8DEF8;
             border-radius: var(--radius-md);
             font-size: 1rem;
             font-family: var(--font-body);
@@ -616,7 +292,7 @@
 
         .email-form-group input:focus {
             outline: none;
-            border-color: var(--color-primary);
+            border-color: #B8A9D4;
         }
 
         .email-consent {
@@ -629,7 +305,7 @@
 
         .email-consent input[type="checkbox"] {
             margin-top: 3px;
-            accent-color: var(--color-primary);
+            accent-color: #B8A9D4;
         }
 
         .email-consent label {
@@ -642,7 +318,7 @@
         .email-submit-btn {
             width: 100%;
             padding: 14px;
-            background: var(--color-primary);
+            background: #B8A9D4;
             color: var(--color-white);
             border: none;
             border-radius: var(--radius-md);
@@ -654,7 +330,7 @@
         }
 
         .email-submit-btn:hover {
-            background: var(--color-primary-dark);
+            background: #9B89BF;
             transform: translateY(-1px);
         }
 
@@ -695,10 +371,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .activities-grid {
-                grid-template-columns: 1fr;
-            }
-
             .quiz-nav {
                 flex-direction: column;
             }
@@ -711,17 +383,13 @@
                 font-size: 1.25rem;
             }
 
-            .result-language {
-                font-size: 1.75rem;
-            }
-
             .email-modal {
                 padding: var(--spacing-lg) var(--spacing-md);
             }
         }
     </style>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nannyfifi.com/"},{"@type":"ListItem","position":2,"name":"Love Language Quiz","item":"https://nannyfifi.com/love-language-quiz.html"}]}
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nannyfifi.com/"},{"@type":"ListItem","position":2,"name":"Sleep Quiz","item":"https://nannyfifi.com/sleep-quiz.html"}]}
     </script>
 </head>
 <body>
@@ -741,8 +409,8 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="love-language-quiz.html" class="active">Love Language Quiz</a></li>
-                <li><a href="sleep-quiz.html">Sleep Quiz</a></li>
+                <li><a href="love-language-quiz.html">Love Language Quiz</a></li>
+                <li><a href="sleep-quiz.html" class="active">Sleep Quiz</a></li>
                 <li><a href="index.html#testimonials">Testimonials</a></li>
                 <li><a href="index.html#book" class="btn btn-primary nav-cta">Book a Call</a></li>
             </ul>
@@ -752,10 +420,10 @@
     <!-- Quiz Hero -->
     <header class="quiz-hero">
         <div class="container">
-            <h1>Discover Your Child's Love Language</h1>
+            <h1>What's Your Child's Sleep Profile?</h1>
             <p class="quiz-hero-description">
-                Every child feels loved differently. Take this quick quiz to understand
-                how your child experiences love and get personalised activity ideas to strengthen your bond.
+                Bedtime battles? Night wakings? Take this quick quiz to understand
+                why your child struggles at bedtime and get personalised tips for calmer evenings.
             </p>
             <div class="quiz-meta">
                 <span class="quiz-meta-item">
@@ -767,8 +435,8 @@
                     <span>12 questions</span>
                 </span>
                 <span class="quiz-meta-item">
-                    <span>🎯</span>
-                    <span>Instant results</span>
+                    <span>🌙</span>
+                    <span>Personalised tips</span>
                 </span>
             </div>
         </div>
@@ -780,7 +448,7 @@
             <!-- Progress Bar -->
             <div class="quiz-progress">
                 <div class="progress-text">
-                    <span id="progress-label">Question 1 of 15</span>
+                    <span id="progress-label">Question 1 of 12</span>
                     <span id="progress-percent">0%</span>
                 </div>
                 <div class="progress-bar">
@@ -800,10 +468,10 @@
             <!-- Quiz Navigation -->
             <div class="quiz-nav">
                 <button class="btn btn-outline" id="prev-btn" disabled>
-                    <span>← Previous</span>
+                    <span>&larr; Previous</span>
                 </button>
-                <button class="btn btn-primary" id="next-btn" disabled>
-                    <span>Next →</span>
+                <button class="btn btn-primary" id="next-btn" disabled style="background:#B8A9D4;">
+                    <span>Next &rarr;</span>
                 </button>
             </div>
         </div>
@@ -814,9 +482,9 @@
         <div class="email-modal">
             <!-- Form state -->
             <div id="email-form-state">
-                <div class="email-modal-icon">🎁</div>
-                <h2>Your results are ready!</h2>
-                <p>Enter your email and we'll send your child's personalised Love Language results straight to your inbox — along with activity ideas to try this week.</p>
+                <div class="email-modal-icon">🌙</div>
+                <h2>Your sleep profile is ready!</h2>
+                <p>Enter your email and we'll send your child's personalised Sleep Profile straight to your inbox — with bedtime tips you can start tonight.</p>
                 <form id="quiz-email-form">
                     <div class="email-form-group">
                         <label for="quiz-name">Name (optional)</label>
@@ -839,7 +507,7 @@
             <div class="email-confirmation" id="email-confirm-state">
                 <div class="email-confirmation-icon">✅</div>
                 <h2>Check your inbox!</h2>
-                <p>Your personalised Love Language results are on their way. Look out for an email from <strong>Nanny Fifi</strong>.</p>
+                <p>Your personalised Sleep Profile is on its way. Look out for an email from <strong>Nanny Fifi</strong>.</p>
                 <p style="font-size:0.8125rem;color:var(--color-text-light);">Don't see it? Check your spam or promotions folder.</p>
             </div>
         </div>
@@ -891,210 +559,174 @@
 
     <script src="script.js"></script>
     <script>
-        // ===== Love Language Quiz =====
+        // ===== Sleep Profile Quiz =====
 
-        // Quiz Questions Data - 5 options per question (one for each love language)
+        // 5 sleep profiles
+        // routine_resistor - fights the routine, stalls, negotiates
+        // overtired_owl - gets wired when tired, missed sleep windows
+        // separation_struggler - needs parent presence, anxious at bedtime
+        // sensory_seeker - needs specific environment, sensitive to stimuli
+        // early_riser - sleeps ok but wakes too early or has fragmented sleep
+
         const questions = [
             {
-                text: "When your child comes home from nursery or school, what do they seem to want most?",
+                text: "What typically happens when you say 'It's bedtime'?",
                 options: [
-                    { text: "A big hug and to sit close to you", type: "touch" },
-                    { text: "To hear 'I missed you! Tell me everything!'", type: "words" },
-                    { text: "Your full, undivided attention to chat together", type: "time" },
-                    { text: "To see if you have a little surprise for them", type: "gifts" },
-                    { text: "Help with their bag, coat, and getting a snack ready", type: "service" }
+                    { text: "Negotiations begin — 'just one more episode', 'five more minutes'", type: "routine_resistor" },
+                    { text: "They seem wired and hyper, even though they're clearly tired", type: "overtired_owl" },
+                    { text: "They get clingy and don't want you to leave", type: "separation_struggler" },
+                    { text: "They complain about something — the light, noise, pyjamas feeling wrong", type: "sensory_seeker" },
+                    { text: "They go along with it fairly well, but wake up very early", type: "early_riser" }
                 ]
             },
             {
-                text: "How does your child typically show affection to you or others?",
+                text: "How long does it usually take your child to fall asleep once they're in bed?",
                 options: [
-                    { text: "Hugs, kisses, and wanting to be physically close", type: "touch" },
-                    { text: "Saying 'I love you' and giving compliments", type: "words" },
-                    { text: "Wanting to do activities together", type: "time" },
-                    { text: "Making cards, drawings, or giving small gifts", type: "gifts" },
-                    { text: "Trying to help with tasks or chores", type: "service" }
+                    { text: "Ages — they keep getting up, asking for things, finding excuses", type: "routine_resistor" },
+                    { text: "A long time — they toss, turn, and seem unable to switch off", type: "overtired_owl" },
+                    { text: "It depends — quickly if I stay, ages if I try to leave", type: "separation_struggler" },
+                    { text: "It varies — some nights fine, others they can't settle due to discomfort", type: "sensory_seeker" },
+                    { text: "They fall asleep fairly quickly, actually", type: "early_riser" }
                 ]
             },
             {
-                text: "What makes your child's face light up the most?",
+                text: "What does your child's energy look like in the hour before bed?",
                 options: [
-                    { text: "A surprise hug or tickle session", type: "touch" },
-                    { text: "Hearing 'I'm so proud of you!'", type: "words" },
-                    { text: "When you put down your phone to play with them", type: "time" },
-                    { text: "Receiving a small unexpected present", type: "gifts" },
-                    { text: "When you help them with something difficult", type: "service" }
+                    { text: "They suddenly find a burst of energy and want to play", type: "routine_resistor" },
+                    { text: "They get increasingly hyper, silly, or emotional", type: "overtired_owl" },
+                    { text: "They get quieter and want to be close to you", type: "separation_struggler" },
+                    { text: "They become more irritable or sensitive to things around them", type: "sensory_seeker" },
+                    { text: "They wind down naturally and seem ready for sleep", type: "early_riser" }
                 ]
             },
             {
-                text: "When your child is upset, what helps them feel better fastest?",
+                text: "If your child wakes during the night, what usually happens?",
                 options: [
-                    { text: "Being held, cuddled, or having their back rubbed", type: "touch" },
-                    { text: "Reassuring words like 'You're going to be okay'", type: "words" },
-                    { text: "You sitting quietly with them, just being present", type: "time" },
-                    { text: "Their comfort toy or a small treat", type: "gifts" },
-                    { text: "You fixing the problem or helping make it better", type: "service" }
+                    { text: "They come out wanting to play, watch TV, or go downstairs", type: "routine_resistor" },
+                    { text: "They're overtired and restless — crying but can't fully wake or settle", type: "overtired_owl" },
+                    { text: "They come to find me and want to get into our bed", type: "separation_struggler" },
+                    { text: "Something woke them — a noise, temperature change, or bad dream", type: "sensory_seeker" },
+                    { text: "They wake very early (before 6am) and are ready to start the day", type: "early_riser" }
                 ]
             },
             {
-                text: "How does your child react when you've been away?",
+                text: "How would you describe your current bedtime routine?",
                 options: [
-                    { text: "Runs to hug you and won't let go", type: "touch" },
-                    { text: "Wants to tell you everything and hear you missed them", type: "words" },
-                    { text: "Immediately wants to play or do something together", type: "time" },
-                    { text: "Asks if you brought them something", type: "gifts" },
-                    { text: "Wants you to help them with something right away", type: "service" }
+                    { text: "We have one but it's a constant battle to stick to it", type: "routine_resistor" },
+                    { text: "It shifts a lot depending on the day — no consistent time", type: "overtired_owl" },
+                    { text: "It's quite long because they need a lot of reassurance", type: "separation_struggler" },
+                    { text: "We've tried different things but nothing seems to consistently work", type: "sensory_seeker" },
+                    { text: "It's actually pretty smooth — the problem is the morning wake time", type: "early_riser" }
                 ]
             },
             {
-                text: "What would disappoint your child the most?",
+                text: "What does your child ask for most at bedtime?",
                 options: [
-                    { text: "If you pushed away their hug or seemed too busy for cuddles", type: "touch" },
-                    { text: "If you criticised them or spoke harshly", type: "words" },
-                    { text: "If you cancelled planned time together", type: "time" },
-                    { text: "If you forgot a promised gift or treat", type: "gifts" },
-                    { text: "If you didn't help when they really needed it", type: "service" }
+                    { text: "More time — another story, another drink, another hug", type: "routine_resistor" },
+                    { text: "Nothing specific — they just seem unable to calm down", type: "overtired_owl" },
+                    { text: "'Stay with me', 'don't go', 'leave the door open'", type: "separation_struggler" },
+                    { text: "Specific things — the right blanket, darkness level, temperature", type: "sensory_seeker" },
+                    { text: "They're generally fine at bedtime, it's mornings that are the issue", type: "early_riser" }
                 ]
             },
             {
-                text: "When your child wants to celebrate something, they:",
+                text: "When your child has a particularly bad night, what usually triggered it?",
                 options: [
-                    { text: "Want lots of hugs, high-fives, and physical celebration", type: "touch" },
-                    { text: "Want to hear praise and enthusiastic words", type: "words" },
-                    { text: "Want to spend special time together celebrating", type: "time" },
-                    { text: "Hope for a reward or special treat", type: "gifts" },
-                    { text: "Want you to do something special for them", type: "service" }
+                    { text: "Screen time too close to bed, or an exciting activity", type: "routine_resistor" },
+                    { text: "A skipped nap, late bedtime, or very busy day", type: "overtired_owl" },
+                    { text: "A change in routine, being away from home, or a stressful day", type: "separation_struggler" },
+                    { text: "Something in the environment — new sounds, different room, etc.", type: "sensory_seeker" },
+                    { text: "Going to bed too late — they still wake at the same early time", type: "early_riser" }
                 ]
             },
             {
-                text: "At bedtime, your child prefers:",
+                text: "How does your child react when the bedtime routine changes (e.g., a different parent does bedtime)?",
                 options: [
-                    { text: "Cuddles, back rubs, and being tucked in snugly", type: "touch" },
-                    { text: "Hearing 'I love you' and what you love about them", type: "words" },
-                    { text: "A quiet chat about the day or a story together", type: "time" },
-                    { text: "Sleeping with a special toy or keepsake", type: "gifts" },
-                    { text: "Having everything prepared - pyjamas, water, room set up perfectly", type: "service" }
+                    { text: "They see it as a chance to push boundaries and test limits", type: "routine_resistor" },
+                    { text: "They get more overtired and dysregulated without the usual timing", type: "overtired_owl" },
+                    { text: "They get upset and want their 'usual' parent", type: "separation_struggler" },
+                    { text: "They struggle because the steps are done slightly differently", type: "sensory_seeker" },
+                    { text: "They adapt fairly well — bedtime isn't really the problem", type: "early_riser" }
                 ]
             },
             {
-                text: "Your child feels most loved when:",
+                text: "What's your biggest bedtime frustration?",
                 options: [
-                    { text: "You hold their hand or they sit on your lap", type: "touch" },
-                    { text: "You notice and comment on their efforts", type: "words" },
-                    { text: "You play their favourite game together", type: "time" },
-                    { text: "You surprise them with something thoughtful", type: "gifts" },
-                    { text: "You prepare their favourite meal", type: "service" }
+                    { text: "The endless stalling and power struggles", type: "routine_resistor" },
+                    { text: "They're exhausted but somehow can't fall asleep", type: "overtired_owl" },
+                    { text: "I can't leave the room without them getting upset", type: "separation_struggler" },
+                    { text: "We can't seem to create the 'right' conditions for sleep", type: "sensory_seeker" },
+                    { text: "The 5am wake-ups are killing us", type: "early_riser" }
                 ]
             },
             {
-                text: "When your child is scared or nervous, they want:",
+                text: "On weekends or holidays, what happens to your child's sleep?",
                 options: [
-                    { text: "To hold your hand or be carried", type: "touch" },
-                    { text: "Reassurance and explanation about what will happen", type: "words" },
-                    { text: "You to stay close by their side", type: "time" },
-                    { text: "Their comfort object or a lucky charm", type: "gifts" },
-                    { text: "You to handle the scary thing for them", type: "service" }
+                    { text: "Bedtime gets pushed later and later because they resist more", type: "routine_resistor" },
+                    { text: "Their whole schedule shifts and it takes days to recover", type: "overtired_owl" },
+                    { text: "They're fine if we're around more, worse if we're out", type: "separation_struggler" },
+                    { text: "Different beds or environments make everything harder", type: "sensory_seeker" },
+                    { text: "Same thing — they still wake at the crack of dawn no matter what", type: "early_riser" }
                 ]
             },
             {
-                text: "When your child has something to share (artwork, story, achievement), they want:",
+                text: "What has worked best in the past to improve bedtime?",
                 options: [
-                    { text: "A big hug and physical celebration", type: "touch" },
-                    { text: "Enthusiastic praise with specific words", type: "words" },
-                    { text: "Your complete, undivided attention", type: "time" },
-                    { text: "To display it somewhere special or add to a collection", type: "gifts" },
-                    { text: "Your help to make it even better or frame it", type: "service" }
+                    { text: "Clear boundaries and consequences — when we're firm, it works", type: "routine_resistor" },
+                    { text: "An earlier bedtime — catching them before they get overtired", type: "overtired_owl" },
+                    { text: "Extra cuddles, a gradual retreat, or a comforter toy", type: "separation_struggler" },
+                    { text: "White noise, blackout curtains, or a specific comfort item", type: "sensory_seeker" },
+                    { text: "A toddler clock or reward for staying in bed until a set time", type: "early_riser" }
                 ]
             },
             {
-                text: "Your child shows they missed you by:",
+                text: "If you could fix one thing about your child's sleep, what would it be?",
                 options: [
-                    { text: "Clinging to you physically", type: "touch" },
-                    { text: "Telling you repeatedly that they missed you", type: "words" },
-                    { text: "Following you around everywhere", type: "time" },
-                    { text: "Showing you things they made or saved for you", type: "gifts" },
-                    { text: "Asking for help with things they saved up", type: "service" }
+                    { text: "I want bedtime to be peaceful, not a nightly negotiation", type: "routine_resistor" },
+                    { text: "I want them to fall asleep easily instead of fighting exhaustion", type: "overtired_owl" },
+                    { text: "I want them to feel safe enough to sleep without me there", type: "separation_struggler" },
+                    { text: "I want to find the right environment so they can settle consistently", type: "sensory_seeker" },
+                    { text: "I want everyone to sleep past 6am", type: "early_riser" }
                 ]
             }
         ];
 
-        // Love Language Data
-        const loveLanguages = {
-            touch: {
-                name: "Physical Touch",
+        // Sleep Profile Data
+        const sleepProfiles = {
+            routine_resistor: {
+                name: "The Routine Resistor",
+                emoji: "🎭",
+                description: "Your child pushes back against bedtime boundaries. They stall, negotiate, and find creative ways to delay sleep. This is often about control and testing limits — very normal developmental behaviour, but exhausting for parents."
+            },
+            overtired_owl: {
+                name: "The Overtired Owl",
+                emoji: "🦉",
+                description: "Your child gets wired when they're tired. Missed sleep windows lead to a surge of cortisol that makes them hyper and unable to settle. The paradox: the more tired they are, the harder it is to fall asleep."
+            },
+            separation_struggler: {
+                name: "The Separation Struggler",
                 emoji: "🤗",
-                description: "Your child feels most loved through physical affection. Hugs, cuddles, high-fives, and gentle touches make them feel secure and connected. Physical closeness is their way of feeling your love in a tangible way.",
-                activities: [
-                    { icon: "🤗", title: "Morning Hugs", desc: "Start each day with a big, warm hug before they get out of bed" },
-                    { icon: "✋", title: "Secret Handshake", desc: "Create a special handshake just for the two of you" },
-                    { icon: "💆", title: "Gentle Massage", desc: "Give a calming back rub or foot massage before bedtime" },
-                    { icon: "💃", title: "Dance Together", desc: "Put on music and dance around the living room together" },
-                    { icon: "📖", title: "Cuddle Reading", desc: "Read books together while snuggled on the sofa" },
-                    { icon: "🎮", title: "Active Play", desc: "Engage in physical games like tickle fights or piggyback rides" }
-                ]
+                description: "Your child needs your presence to feel safe enough to sleep. Bedtime triggers separation anxiety — they want you close, they want the door open, they want reassurance. This is rooted in attachment and is very common."
             },
-            words: {
-                name: "Words of Affirmation",
-                emoji: "💬",
-                description: "Your child thrives on verbal encouragement and praise. Hearing 'I love you', 'I'm proud of you', and specific compliments about their efforts makes them feel valued and confident. They may be sensitive to harsh words.",
-                activities: [
-                    { icon: "📝", title: "Lunch Box Notes", desc: "Write encouraging notes to slip into their bag or lunchbox" },
-                    { icon: "🌟", title: "Specific Praise", desc: "Notice and name specific things they do well each day" },
-                    { icon: "📖", title: "Bedtime Affirmations", desc: "End each day telling them 3 things you love about them" },
-                    { icon: "🎵", title: "Sing Their Praises", desc: "Make up silly songs about how wonderful they are" },
-                    { icon: "💌", title: "Mirror Messages", desc: "Write encouraging words on the bathroom mirror" },
-                    { icon: "📞", title: "Check-in Calls", desc: "When apart, call just to say you're thinking of them" }
-                ]
+            sensory_seeker: {
+                name: "The Sensory Sensitive Sleeper",
+                emoji: "🔮",
+                description: "Your child is highly sensitive to their sleep environment. Light, noise, temperature, textures — small things that others barely notice can keep your child awake. Getting the environment right is key."
             },
-            time: {
-                name: "Quality Time",
-                emoji: "⏰",
-                description: "Your child feels most loved when they have your undivided attention. Putting away distractions and being fully present with them - whether playing, talking, or just being together - fills their emotional tank.",
-                activities: [
-                    { icon: "📅", title: "One-on-One Dates", desc: "Schedule regular special time just for the two of you" },
-                    { icon: "🎲", title: "Game Time", desc: "Play their favourite board games or activities together" },
-                    { icon: "🍳", title: "Cook Together", desc: "Let them help prepare meals, even if it takes longer" },
-                    { icon: "🚶", title: "Daily Walks", desc: "Take short walks together and let them lead the conversation" },
-                    { icon: "🎨", title: "Create Together", desc: "Do arts and crafts or build something side by side" },
-                    { icon: "📵", title: "Phone-Free Time", desc: "Set aside time each day where devices are put away" }
-                ]
-            },
-            gifts: {
-                name: "Receiving Gifts",
-                emoji: "🎁",
-                description: "Your child feels loved through thoughtful gifts - not expensive ones, but meaningful tokens that show you were thinking of them. They treasure keepsakes and often attach emotional significance to objects.",
-                activities: [
-                    { icon: "🌸", title: "Nature Treasures", desc: "Collect special rocks, leaves, or flowers for them on walks" },
-                    { icon: "🧸", title: "Just Because", desc: "Surprise them with small treats 'just because you love them'" },
-                    { icon: "📦", title: "Memory Box", desc: "Create a special box to store treasured items together" },
-                    { icon: "🎨", title: "Handmade Gifts", desc: "Make simple crafts or drawings for them" },
-                    { icon: "📸", title: "Photo Gifts", desc: "Print photos of special moments to give them" },
-                    { icon: "🏪", title: "Choosing Together", desc: "Let them pick a small item when running errands together" }
-                ]
-            },
-            service: {
-                name: "Acts of Service",
-                emoji: "🛠️",
-                description: "Your child feels loved when you do things to help them or make their life easier. Helping with tasks, preparing their favourite meal, or fixing something important to them shows you care deeply.",
-                activities: [
-                    { icon: "🍎", title: "Special Breakfast", desc: "Prepare their favourite breakfast as a surprise" },
-                    { icon: "🔧", title: "Fix It Together", desc: "Help repair a broken toy or solve a problem they have" },
-                    { icon: "📚", title: "Homework Help", desc: "Sit with them and help with challenging tasks" },
-                    { icon: "🛏️", title: "Room Makeover", desc: "Help organise or redecorate their space together" },
-                    { icon: "🎒", title: "Preparation Help", desc: "Help them prepare for activities or special events" },
-                    { icon: "✨", title: "Teach Skills", desc: "Patiently teach them something new they want to learn" }
-                ]
+            early_riser: {
+                name: "The Early Riser",
+                emoji: "🌅",
+                description: "Your child actually falls asleep well, but wakes too early. Those pre-6am wake-ups are tough on the whole family. This is often linked to light exposure, sleep cycles, or total sleep needs."
             }
         };
 
         // Quiz State
         let currentQuestion = 0;
         let answers = [];
-        let scores = { touch: 0, words: 0, time: 0, gifts: 0, service: 0 };
+        let scores = { routine_resistor: 0, overtired_owl: 0, separation_struggler: 0, sensory_seeker: 0, early_riser: 0 };
 
         // DOM Elements
         const quizSection = document.getElementById('quiz-section');
-        const resultsSection = document.getElementById('results-section');
-        const questionCard = document.getElementById('question-card');
         const questionNumber = document.getElementById('question-number');
         const questionText = document.getElementById('question-text');
         const questionOptions = document.getElementById('question-options');
@@ -1108,7 +740,7 @@
         function initQuiz() {
             currentQuestion = 0;
             answers = [];
-            scores = { touch: 0, words: 0, time: 0, gifts: 0, service: 0 };
+            scores = { routine_resistor: 0, overtired_owl: 0, separation_struggler: 0, sensory_seeker: 0, early_riser: 0 };
             showQuestion();
         }
 
@@ -1117,16 +749,13 @@
             const question = questions[currentQuestion];
             const progress = ((currentQuestion) / questions.length) * 100;
 
-            // Update progress
             progressLabel.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
             progressPercent.textContent = `${Math.round(progress)}%`;
             progressFill.style.width = `${progress}%`;
 
-            // Update question
             questionNumber.textContent = `Question ${currentQuestion + 1}`;
             questionText.textContent = question.text;
 
-            // Create options
             const letters = ['A', 'B', 'C', 'D', 'E'];
             questionOptions.innerHTML = question.options.map((option, index) => {
                 const isSelected = answers[currentQuestion] === option.type;
@@ -1138,31 +767,22 @@
                 `;
             }).join('');
 
-            // Add click handlers
             document.querySelectorAll('.option-btn').forEach(btn => {
                 btn.addEventListener('click', () => selectOption(btn));
             });
 
-            // Update navigation
             prevBtn.disabled = currentQuestion === 0;
             nextBtn.disabled = !answers[currentQuestion];
             nextBtn.innerHTML = currentQuestion === questions.length - 1
                 ? '<span>See Results</span>'
-                : '<span>Next →</span>';
+                : '<span>Next &rarr;</span>';
         }
 
         // Select Option
         function selectOption(btn) {
-            // Remove selected from all
             document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-
-            // Add selected to clicked
             btn.classList.add('selected');
-
-            // Store answer
             answers[currentQuestion] = btn.dataset.type;
-
-            // Enable next button
             nextBtn.disabled = false;
         }
 
@@ -1187,26 +807,23 @@
 
         const API_URL = 'https://nannyfifi-backend-production.up.railway.app';
 
-        // Calculate and Show Results — now shows email capture modal
+        // Calculate and Show Results — shows email capture modal
         function showResults() {
-            // Calculate scores
             answers.forEach(type => {
                 if (type) scores[type]++;
             });
 
-            // Track quiz completion in Google Analytics
-            const sortedLanguages = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-            const primaryType = sortedLanguages[0][0];
-            const primary = loveLanguages[primaryType];
+            const sortedProfiles = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+            const primaryType = sortedProfiles[0][0];
+            const primary = sleepProfiles[primaryType];
 
             if (typeof gtag === 'function') {
                 gtag('event', 'quiz_complete', {
-                    'event_category': 'Love Language Quiz',
+                    'event_category': 'Sleep Quiz',
                     'event_label': primary.name
                 });
             }
 
-            // Show email capture modal
             document.getElementById('email-overlay').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -1223,7 +840,6 @@
 
             if (!email) return;
 
-            // Disable button while submitting
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             errorEl.style.display = 'none';
@@ -1235,7 +851,7 @@
                     body: JSON.stringify({
                         email,
                         name,
-                        quiz_type: 'love_language',
+                        quiz_type: 'sleep_routine',
                         quiz_results: scores,
                         email_marketing_consent: consent,
                     }),
@@ -1246,19 +862,16 @@
                     throw new Error(data.error || 'Something went wrong');
                 }
 
-                // Track email capture in GA
                 if (typeof gtag === 'function') {
                     gtag('event', 'quiz_email_captured', {
-                        'event_category': 'Love Language Quiz',
+                        'event_category': 'Sleep Quiz',
                         'event_label': email,
                     });
                 }
 
-                // Show confirmation
                 document.getElementById('email-form-state').style.display = 'none';
                 document.getElementById('email-confirm-state').classList.add('active');
 
-                // Auto-close modal after 5 seconds
                 setTimeout(() => {
                     document.getElementById('email-overlay').classList.remove('active');
                     document.body.style.overflow = '';

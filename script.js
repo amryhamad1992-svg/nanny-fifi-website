@@ -15,6 +15,13 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
+// ===== UTM Tracking =====
+const utmParams = new URLSearchParams(window.location.search);
+['utm_source', 'utm_medium', 'utm_campaign'].forEach(key => {
+    const val = utmParams.get(key);
+    if (val) sessionStorage.setItem(key, val);
+});
+
 // ===== Navbar Scroll Effect =====
 const navbar = document.querySelector('.navbar');
 
@@ -141,6 +148,9 @@ if (contactForm) {
             email: contactForm.querySelector('#email').value.trim(),
             message: contactForm.querySelector('#message').value.trim(),
             source: 'website_form',
+            utm_source: sessionStorage.getItem('utm_source') || undefined,
+            utm_medium: sessionStorage.getItem('utm_medium') || undefined,
+            utm_campaign: sessionStorage.getItem('utm_campaign') || undefined,
         };
 
         try {
